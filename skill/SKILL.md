@@ -16,7 +16,7 @@ Exemplos:
 
 ## Estrutura atual do backlog
 
-> Última atualização: 2026-06-03 — max csv_id = **114** → próximo = **115**
+> Última atualização: 2026-06-03 — max csv_id = **134** → próximo = **135**
 
 ```
 100  Epic    Negocio e Governanca
@@ -27,6 +27,14 @@ Exemplos:
 106          Task   Mostrar jornada de navegação (Transitions) da carta principal
 107          Task   Integrar dados GA4 para app MS Digital
 108          Task   Filtrar e rankear Cartas de Serviço via regex nas URLs
+127      PBI      Estudo de Uso do Filtro de Perfil (bench-carta)
+128          Task   Elaborar apresentação gerencial da recomendação REMOVER
+129          Task   Documentar limitação event tracking e propor instrumentação
+130      PBI      Prototipagem Seção Categorias Portal MS
+131          Task   Apresentar protótipo para validação com partes interessadas
+132          Task   Registrar feedback e definir próximos passos
+133      PBI      Levantamento Material Design System MS
+134          Task   Publicar catálogo DS-MS no vault Obsidian e wiki TFS
 102    Feature  2.3 Cartas de Servico
 109      PBI      Cruzamento e Higienização de Cartas de Serviço (CGE-MS)
 110          Task   Detectar colunas HTML/entities (--probe-schema)
@@ -34,6 +42,18 @@ Exemplos:
 112          Task   Detectar duplicatas exatas e similares
 113          Task   Pontuação de qualidade + cadastro modelo sugerido
 114          Task   Relatório HTML offline (KPIs, treemap, diff)
+115    Feature  2.4 Migração EDS → XVia
+116      PBI      Documentação governança módulo FormFlow
+117          Task   Criar documentacao-tecnica.md do FormFlow
+118          Task   Revisar gaps FormFlow v1 com equipe XVia
+119      PBI      Validação e handoff docs com fornecedor XVia
+120          Task   Consolidar lista de gaps por módulo (todos os 6)
+121          Task   Agendar reunião de repasse técnico com equipe XVia
+122    Feature  2.5 ABEPTIC 2026 — Avaliação IOSPD
+123      PBI      Convalidação IOSPD 2026 — MS
+124          Task   Finalizar evidências Dimensão 1.1 para defesa
+125          Task   Revisar backlog_convalidacao_v3.csv e fechar gaps abertos
+126          Task   Submeter relatório final IOSPD ao ABEP 2026
 ```
 
 **Mapeamento pai rápido:**
