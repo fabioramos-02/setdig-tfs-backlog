@@ -454,6 +454,45 @@
       "estimativa_horas": 3,
       "tags": "ds-ms obsidian catalogo",
       "ado_id": ""
+    },
+    {
+      "csv_id": 135,
+      "tipo": "Product Backlog Item",
+      "titulo": "Mapeamento Institucional XVia — Órgãos do Governo MS",
+      "descricao": "**Historia do usuario**\nComo analista SETDIG, quero ter o cadastro institucional dos 47 orgaos do governo MS (secretario, missao, competencias, estrutura interna) carregado em SQLite e sincronizado com vault Obsidian, para subsidiar analises de governanca digital, relatorios institucionais e o organograma oficial.\n\n**Requisitos**\n- Pipeline ETL: PDF organograma + Orgaos.csv + Site.csv + scraping /a-secretaria/ -> SQLite\n- Schema com 3 tabelas: secretaria, estrutura_interna, scraping_log\n- Diagrama Mermaid do organograma derivado do Decreto 16.165/2023\n- Notas bidirecionais no vault Obsidian (10-conhecimento/secretarias/)\n\n**Criterios de Aceitacao**\n- 47 orgaos cadastrados em institucional.db (Fase C concluida)\n- 14 secretarias com dados de scraping coletados (Fase E concluida)\n- Fase F (upsert SQLite com dados de scraping) executada\n- Fase G (organograma.md Mermaid) gerada\n- Fase H (notas Obsidian) publicadas no vault\n- Decisao registrada sobre os 24 orgaos com /a-secretaria/ retornando 404",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": 16,
+      "tags": "xvia orgaos-institucionais sqlite obsidian",
+      "ado_id": ""
+    },
+    {
+      "csv_id": 136,
+      "tipo": "Task",
+      "titulo": "Relatório CGE — análise de 216 erros reportados em serviços do Portal Único",
+      "descricao": "Processar exports CSV do CGE (2026-05-28T12-28 e 2026-05-28T12-50, 216 linhas cada) com erros reportados pelo cidadao em servicos do Portal Unico MS. Cruzar com Analytics Dashboard.pdf e gerar relatorio consolidado por orgao e tipo de erro.\n\nSubatividades:\n- Normalizar encoding dos CSVs (cp1252 -> utf-8) e cabecalhos\n- Agrupar por Orgao, Servico, Tipo de Erro\n- Calcular taxas Atendido / Corrigido / Resolucao\n- Cruzar com dados de trafego do dashboard (Matomo idSite=298)\n- Gerar relatorio HTML/markdown com ranking de servicos mais reportados\n- Apresentar a CGE-MS e SGD",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 103,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": 6,
+      "tags": "relatorio-cge erros portal-unico cge",
+      "ado_id": ""
+    },
+    {
+      "csv_id": 137,
+      "tipo": "Product Backlog Item",
+      "titulo": "Backlog TFS SETDIG — viewer + skill /tfs para Claude Code",
+      "descricao": "**Historia do usuario**\nComo equipe SETDIG, quero ter um backlog TFS local em xlsx com viewer HTML estilo Azure DevOps e skill /tfs para inserir work items via linguagem natural no Claude Code, para reduzir atrito de gestao de backlog sem depender de acesso ao Azure DevOps oficial.\n\n**Requisitos**\n- backlog.xlsx com schema TFS (csv_id, tipo, titulo, descricao, csv_id_pai, prioridade, sprint, estimativa_horas, tags, ado_id)\n- Conversor xlsx_to_json.py gerando backlog.json + backlog_viewer.html\n- Skill /tfs em ~/.claude/skills/tfs/SKILL.md respeitando hierarquia Epic->Feature->PBI->Task\n- Padroes de descricao por tipo (Epic/Feature, PBI, Task, Bug) conforme TFS.pdf v1 jul/2024\n\n**Criterios de Aceitacao**\n- Viewer HTML renderiza arvore hierarquica e abre no browser\n- Skill /tfs instalada globalmente e funcional\n- Insercao via linguagem natural mostra previa antes de salvar\n- Apos salvar, xlsx_to_json.py executa e atualiza viewer\n- Campo ado_id permite vincular item local ao Azure DevOps oficial",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 3,
+      "sprint": "",
+      "estimativa_horas": 8,
+      "tags": "tooling tfs backlog skill claude-code",
+      "ado_id": ""
     }
   ]
 }
