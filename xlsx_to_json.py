@@ -55,15 +55,15 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --sel-bar:   #0078D4;
   --hover:     #F3F5F9;
 
-  /* ADO bowtie colors */
-  --c-epic:    #5C2D91;
-  --c-feat:    #009CCC;
+  /* TFS / Azure DevOps official colors */
+  --c-epic:    #FF7B00;
+  --c-feat:    #773B93;
   --c-pbi:     #009CCC;
-  --c-task:    #B08A00;
+  --c-task:    #F2CB1D;
   --c-bug:     #CC293D;
 
-  --c-epic-bg: #EDE7F6;
-  --c-feat-bg: #E1F5FE;
+  --c-epic-bg: #FFF3E0;
+  --c-feat-bg: #EDE7F6;
   --c-pbi-bg:  #E1F5FE;
   --c-task-bg: #FFF8E1;
   --c-bug-bg:  #FDECEA;
@@ -388,28 +388,37 @@ const DATA = __JSON_DATA__;
 // ── Bowtie SVG icons (ADO style) ──────────────────────────────────────────
 const ICONS = {
   "Epic": {
-    bg: "#5C2D91", fg: "#EDE7F6",
+    bg: "#FF7B00", fg: "#FFF3E0",
     svg: `<svg viewBox="0 0 10 10" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5 1L1 4v5h3V6h2v3h3V4L5 1z"/>
+      <path d="M1 3.2L2.5 6 5 2.2 7.5 6 9 3.2V8H1z"/>
+      <circle cx="1" cy="2.6" r="0.6"/>
+      <circle cx="5" cy="1.6" r="0.6"/>
+      <circle cx="9" cy="2.6" r="0.6"/>
     </svg>`
   },
   "Feature": {
-    bg: "#009CCC", fg: "#E1F5FE",
+    bg: "#773B93", fg: "#EDE7F6",
     svg: `<svg viewBox="0 0 10 10" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5.5 1L3 5.5h2.5L4 9l5-5H6.5z"/>
+      <path d="M3 1.2h4v3a2 2 0 0 1-4 0V1.2z"/>
+      <rect x="4.3" y="5.6" width="1.4" height="1.6"/>
+      <rect x="2.8" y="7.6" width="4.4" height="1.2" rx="0.2"/>
+      <path d="M2 2.4H1v1.4a1.2 1.2 0 0 0 1.2 1.2H3" fill="none" stroke="white" stroke-width="0.7"/>
+      <path d="M8 2.4h1v1.4a1.2 1.2 0 0 1-1.2 1.2H7" fill="none" stroke="white" stroke-width="0.7"/>
     </svg>`
   },
   "Product Backlog Item": {
     bg: "#009CCC", fg: "#E1F5FE",
-    svg: `<svg viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="8" height="8" rx="1"/>
-      <circle cx="5" cy="5" r="1.5" fill="white" stroke="none"/>
+    svg: `<svg viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="0.9" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1.2" y="1.5" width="7.6" height="7" rx="0.6" fill="white" fill-opacity="0.15"/>
+      <line x1="2.4" y1="3.4" x2="7.6" y2="3.4"/>
+      <line x1="2.4" y1="5"   x2="7.6" y2="5"/>
+      <line x1="2.4" y1="6.6" x2="5.6" y2="6.6"/>
     </svg>`
   },
   "Task": {
-    bg: "#D8A500", fg: "#FFF8E1",
-    svg: `<svg viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="8" height="8" rx="1"/>
+    bg: "#F2CB1D", fg: "#FFF8E1",
+    svg: `<svg viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="8" height="8" rx="1" fill="white" fill-opacity="0.15" stroke="white" stroke-width="0.9"/>
       <polyline points="3,5 4.3,6.5 7,3.5"/>
     </svg>`
   },
