@@ -224,3 +224,13 @@ Se o usuário mencionar algo relacionado a essas fontes ou arquivos, usar para e
 - Descrição **sempre** segue o padrão TFS do tipo correspondente.
 - Sempre rodar `xlsx_to_json.py` após salvar.
 - Itens placeholder (100, 101, 102) ancoram itens reais do TFS — campo `ado_id` deve ser preenchido quando vinculado ao Azure DevOps.
+
+## Status dos work items
+
+A planilha tem coluna `status` (12ª, após `ado_id`): `A fazer` | `Em progresso` | `Finalizado`.
+
+- Itens novos via `/tfs` **não precisam preencher** — `ws.append()` com 11 valores deixa vazio e o conversor aplica default `A fazer`.
+- O status é editável **direto no `backlog_viewer.html`** (controle segmentado no painel de detalhe). Edições ficam em `localStorage` do navegador — instantâneo, sem rodar Python.
+- Sincronização com o xlsx (opcional, quando quiser consolidar):
+  1. Clicar **"Exportar status"** no header do viewer → baixa `status_updates.json`
+  2. `python apply_status.py` (lê de `Downloads\status_updates.json` por padrão, ou passar caminho) → grava no xlsx e regenera JSON + HTML.

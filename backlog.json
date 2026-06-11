@@ -11,7 +11,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "epic,governanca,programa",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 101,
@@ -24,7 +25,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "feature,levantamento,analytics",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 102,
@@ -37,7 +39,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "feature,cartas-servico,higienizacao",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 103,
@@ -50,7 +53,8 @@
       "sprint": "Sprint 1",
       "estimativa_horas": null,
       "tags": "dashboard,matomo,ga4,portal-unico",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 104,
@@ -63,7 +67,8 @@
       "sprint": "Sprint 1",
       "estimativa_horas": 9,
       "tags": "matomo,top-paginas",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 105,
@@ -76,7 +81,8 @@
       "sprint": "Sprint 1",
       "estimativa_horas": 3,
       "tags": "matomo,busca",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 106,
@@ -89,7 +95,8 @@
       "sprint": "Sprint 2",
       "estimativa_horas": 11,
       "tags": "matomo,transitions,jornada",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 107,
@@ -102,7 +109,8 @@
       "sprint": "Sprint 1",
       "estimativa_horas": 10,
       "tags": "ga4,ms-digital",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 108,
@@ -115,7 +123,8 @@
       "sprint": "Sprint 2",
       "estimativa_horas": 6,
       "tags": "cartas,ranking,regex",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 109,
@@ -128,7 +137,8 @@
       "sprint": "Sprint 3",
       "estimativa_horas": null,
       "tags": "cge,cruzamento,similaridade",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 110,
@@ -141,7 +151,8 @@
       "sprint": "Sprint 3",
       "estimativa_horas": 4,
       "tags": "dba,probe-schema",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 111,
@@ -154,7 +165,8 @@
       "sprint": "Sprint 3",
       "estimativa_horas": 16,
       "tags": "snapshot,extracao,postgres",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 112,
@@ -167,7 +179,8 @@
       "sprint": "Sprint 3",
       "estimativa_horas": 10,
       "tags": "similaridade,clusters",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 113,
@@ -180,7 +193,8 @@
       "sprint": "Sprint 4",
       "estimativa_horas": 4,
       "tags": "qualidade,modelo",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 114,
@@ -193,7 +207,8 @@
       "sprint": "Sprint 4",
       "estimativa_horas": 12,
       "tags": "relatorio,html,kpi,treemap",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 115,
@@ -206,7 +221,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-eds",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 116,
@@ -219,7 +235,8 @@
       "sprint": "",
       "estimativa_horas": 8,
       "tags": "xvia formflow documentacao",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 117,
@@ -232,7 +249,8 @@
       "sprint": "",
       "estimativa_horas": 6,
       "tags": "xvia formflow",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 118,
@@ -245,7 +263,8 @@
       "sprint": "",
       "estimativa_horas": 3,
       "tags": "xvia formflow gaps",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 119,
@@ -258,7 +277,8 @@
       "sprint": "",
       "estimativa_horas": 12,
       "tags": "xvia handoff validacao",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 120,
@@ -271,7 +291,8 @@
       "sprint": "",
       "estimativa_horas": 4,
       "tags": "xvia gaps auditoria",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 121,
@@ -284,7 +305,8 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "xvia handoff reuniao",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 122,
@@ -297,7 +319,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "abep iospd pesquisa",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 123,
@@ -310,7 +333,8 @@
       "sprint": "",
       "estimativa_horas": 16,
       "tags": "abep iospd convalidacao",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 124,
@@ -323,7 +347,8 @@
       "sprint": "",
       "estimativa_horas": 4,
       "tags": "abep dimensao-1.1 evidencias",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 125,
@@ -336,7 +361,8 @@
       "sprint": "",
       "estimativa_horas": 6,
       "tags": "abep convalidacao gaps",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 126,
@@ -349,7 +375,8 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "abep submissao relatorio",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 127,
@@ -362,7 +389,8 @@
       "sprint": "",
       "estimativa_horas": 6,
       "tags": "bench-carta filtro-perfil analytics",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 128,
@@ -375,7 +403,8 @@
       "sprint": "",
       "estimativa_horas": 3,
       "tags": "bench-carta apresentacao gestao",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 129,
@@ -388,7 +417,8 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "bench-carta event-tracking matomo",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 130,
@@ -401,7 +431,8 @@
       "sprint": "",
       "estimativa_horas": 5,
       "tags": "prototipo categorias portal-ms",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 131,
@@ -414,7 +445,8 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "prototipo validacao apresentacao",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 132,
@@ -427,7 +459,8 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "prototipo feedback decisao",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 133,
@@ -440,7 +473,8 @@
       "sprint": "",
       "estimativa_horas": 4,
       "tags": "ds-ms design-system",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 134,
@@ -453,7 +487,8 @@
       "sprint": "",
       "estimativa_horas": 3,
       "tags": "ds-ms obsidian catalogo",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 135,
@@ -466,7 +501,8 @@
       "sprint": "",
       "estimativa_horas": 16,
       "tags": "xvia orgaos-institucionais sqlite obsidian",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 136,
@@ -479,7 +515,8 @@
       "sprint": "",
       "estimativa_horas": 6,
       "tags": "relatorio-cge erros portal-unico cge",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 137,
@@ -492,7 +529,8 @@
       "sprint": "",
       "estimativa_horas": 8,
       "tags": "tooling tfs backlog skill claude-code",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 138,
@@ -505,7 +543,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas-servico",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 139,
@@ -518,7 +557,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "governanca;eleitoral",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 140,
@@ -531,7 +571,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas-servico;prototipo",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 141,
@@ -544,7 +585,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "abep;comite;linguagem-simples",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     },
     {
       "csv_id": 142,
@@ -557,7 +599,8 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "mad;acessibilidade;seo;linguagem-simples;comite",
-      "ado_id": ""
+      "ado_id": "",
+      "status": "A fazer"
     }
   ]
 }

@@ -11,6 +11,8 @@ XLSX = os.path.join(BASE, "backlog.xlsx")
 JSON_OUT = os.path.join(BASE, "backlog.json")
 HTML_OUT = os.path.join(BASE, "backlog_viewer.html")
 
+STATUSES = ("A fazer", "Em progresso", "Finalizado")
+
 
 def xlsx_to_items(path):
     wb = openpyxl.load_workbook(path, data_only=True)
@@ -30,6 +32,8 @@ def xlsx_to_items(path):
         item["descricao"] = str(item["descricao"]) if item["descricao"] else ""
         item["tags"] = str(item["tags"]) if item["tags"] else ""
         item["sprint"] = str(item["sprint"]) if item["sprint"] else ""
+        st = str(item.get("status") or "").strip()
+        item["status"] = st if st in STATUSES else "A fazer"
         items.append(item)
     return items
 
@@ -67,6 +71,11 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --c-pbi-bg:  #E1F5FE;
   --c-task-bg: #FFF8E1;
   --c-bug-bg:  #FDECEA;
+
+  /* Status */
+  --s-todo:    #9299A8;
+  --s-prog:    #0078D4;
+  --s-done:    #107C10;
 
   --indent: 20px;
   --row-h: 32px;
@@ -162,10 +171,11 @@ header {
   overflow-y: auto;
   background: #fff;
   border-right: 1px solid var(--border);
-  padding: 8px 0 32px;
+  padding: 0 0 32px;
   scrollbar-width: thin;
   scrollbar-color: var(--border-2) transparent;
 }
+#tree { padding-top: 8px; }
 .tree-panel::-webkit-scrollbar { width: 5px; }
 .tree-panel::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
 
@@ -350,6 +360,124 @@ header {
 }
 .field-value.title-v { font-weight: 500; font-size: 14px; }
 .field-value.empty-v { color: var(--text-muted); font-style: italic; font-size: 12px; }
+
+/* ── STATUS ── */
+.st-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 150ms;
+}
+.node-prog {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.node-row.st-done .title-text { opacity: .55; }
+
+/* filter bar */
+.filter-bar {
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+.chip {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-2);
+  background: #fff;
+  color: var(--text-sub);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 120ms;
+}
+.chip .dot { width: 7px; height: 7px; border-radius: 50%; }
+.chip:hover { border-color: #0078D4; color: #0078D4; }
+.chip.active { background: var(--text); border-color: var(--text); color: #fff; }
+
+/* header stats + progress */
+.hdr-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+}
+.hdr-stat .dot { width: 7px; height: 7px; border-radius: 50%; }
+.hdr-progress {
+  width: 110px; height: 5px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.hdr-progress-fill {
+  height: 100%; width: 0%;
+  background: var(--s-done);
+  border-radius: 3px;
+  transition: width 250ms ease;
+}
+.hdr-pct {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-sub);
+  min-width: 30px;
+}
+.export-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border: 1px solid var(--border-2);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text-sub);
+  cursor: pointer;
+  transition: all 100ms;
+}
+.export-btn:hover { background: #EEF3FD; border-color: #0078D4; color: #0078D4; }
+
+/* segmented status control (detail) */
+.status-seg {
+  display: inline-flex;
+  margin-left: auto;
+  border: 1px solid var(--border-2);
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.status-seg button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  background: #fff;
+  color: var(--text-sub);
+  border: none;
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 120ms;
+}
+.status-seg button:last-child { border-right: none; }
+.status-seg button .dot { width: 7px; height: 7px; border-radius: 50%; }
+.status-seg button:hover { background: var(--hover); }
+.status-seg button.active { color: #fff; }
+.status-seg button.active.todo { background: var(--s-todo); }
+.status-seg button.active.prog { background: var(--s-prog); }
+.status-seg button.active.done { background: var(--s-done); }
+.status-seg button.active .dot { background: #fff !important; }
 </style>
 </head>
 <body>
@@ -368,12 +496,21 @@ header {
   </div>
   <span class="hdr-title">Backlog · Dashboard Analítico Portal Único MS</span>
   <div class="hdr-right">
+    <span class="hdr-stat"><span class="dot" style="background:var(--s-todo)"></span><span id="cnt-todo">0</span></span>
+    <span class="hdr-stat"><span class="dot" style="background:var(--s-prog)"></span><span id="cnt-prog">0</span></span>
+    <span class="hdr-stat"><span class="dot" style="background:var(--s-done)"></span><span id="cnt-done">0</span></span>
+    <div class="hdr-progress"><div class="hdr-progress-fill" id="hdr-fill"></div></div>
+    <span class="hdr-pct" id="hdr-pct">0%</span>
+    <button class="export-btn" id="export-btn" title="Baixa status_updates.json — aplique no xlsx com: python apply_status.py">Exportar status</button>
     <span class="hdr-pill" id="hdr-count">— items</span>
   </div>
 </header>
 
 <div class="layout">
-  <div class="tree-panel" id="tree"></div>
+  <div class="tree-panel">
+    <div class="filter-bar" id="filterbar"></div>
+    <div id="tree"></div>
+  </div>
   <div class="detail-panel" id="detail">
     <div class="empty-state">
       <div class="empty-icon">⊞</div>
@@ -442,16 +579,105 @@ const LABEL = {
 const INDENT_PX = 20;
 
 const map = {};
-DATA.items.forEach(it => { map[it.csv_id] = { ...it, children: [] }; });
+DATA.items.forEach(it => { map[it.csv_id] = { ...it, children: [], parent: null }; });
 const roots = [];
 DATA.items.forEach(it => {
   const n = map[it.csv_id];
-  if (it.csv_id_pai && map[it.csv_id_pai]) map[it.csv_id_pai].children.push(n);
-  else roots.push(n);
+  if (it.csv_id_pai && map[it.csv_id_pai]) {
+    map[it.csv_id_pai].children.push(n);
+    n.parent = map[it.csv_id_pai];
+  } else roots.push(n);
 });
 
 document.getElementById("hdr-count").textContent =
   `${DATA.items.length} items`;
+
+// ── Status (localStorage overrides) ───────────────────────────────────────
+const STATUSES = ["A fazer", "Em progresso", "Finalizado"];
+const ST_CLS = { "A fazer": "todo", "Em progresso": "prog", "Finalizado": "done" };
+const ST_VAR = { "A fazer": "var(--s-todo)", "Em progresso": "var(--s-prog)", "Finalizado": "var(--s-done)" };
+const LS_KEY = "tfs-backlog-status";
+
+let overrides = {};
+try { overrides = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch (e) { overrides = {}; }
+// poda overrides redundantes (já sincronizados no xlsx) ou inválidos
+Object.keys(overrides).forEach(id => {
+  if (!map[id] || !STATUSES.includes(overrides[id]) ||
+      overrides[id] === (map[id].status || "A fazer")) delete overrides[id];
+});
+localStorage.setItem(LS_KEY, JSON.stringify(overrides));
+
+function effStatus(n) { return overrides[n.csv_id] || n.status || "A fazer"; }
+
+function descendants(n) {
+  let out = [];
+  n.children.forEach(c => { out.push(c); out = out.concat(descendants(c)); });
+  return out;
+}
+
+function refreshNode(n) {
+  const st = effStatus(n);
+  if (n.dotEl) n.dotEl.style.background = ST_VAR[st];
+  if (n.rowEl) n.rowEl.classList.toggle("st-done", st === "Finalizado");
+  if (n.progEl) {
+    const ds = descendants(n);
+    const done = ds.filter(d => effStatus(d) === "Finalizado").length;
+    n.progEl.textContent = `${done}/${ds.length}`;
+  }
+}
+
+function updateHeader() {
+  const c = { "A fazer": 0, "Em progresso": 0, "Finalizado": 0 };
+  DATA.items.forEach(it => c[effStatus(map[it.csv_id])]++);
+  document.getElementById("cnt-todo").textContent = c["A fazer"];
+  document.getElementById("cnt-prog").textContent = c["Em progresso"];
+  document.getElementById("cnt-done").textContent = c["Finalizado"];
+  const total = DATA.items.length;
+  const pct = total ? Math.round(100 * c["Finalizado"] / total) : 0;
+  document.getElementById("hdr-fill").style.width = pct + "%";
+  document.getElementById("hdr-pct").textContent = pct + "%";
+}
+
+let currentSeg = null;
+function syncSeg(n) {
+  if (!currentSeg || currentSeg.node !== n) return;
+  const st = effStatus(n);
+  currentSeg.seg.querySelectorAll("button").forEach((b, i) => {
+    b.classList.toggle("active", STATUSES[i] === st);
+  });
+}
+
+function setStatus(n, st) {
+  const base = n.status || "A fazer";
+  if (st === base) delete overrides[n.csv_id];
+  else overrides[n.csv_id] = st;
+  localStorage.setItem(LS_KEY, JSON.stringify(overrides));
+  let p = n;
+  while (p) { refreshNode(p); p = p.parent; }
+  updateHeader();
+  applyFilter();
+  syncSeg(n);
+}
+
+// ── Filtro por status ─────────────────────────────────────────────────────
+let filter = "Todos";
+
+function nodeMatches(n) {
+  if (filter === "Todos") return true;
+  if (effStatus(n) === filter) return true;
+  return n.children.some(nodeMatches);
+}
+
+function applyFilter() {
+  Object.values(map).forEach(n => {
+    const show = nodeMatches(n);
+    if (n.wrapEl) n.wrapEl.style.display = show ? "" : "none";
+    if (filter !== "Todos" && show && n.children.length && n.children.some(nodeMatches)) {
+      n.childrenEl.classList.add("open");
+      n.toggleEl.classList.add("open");
+    }
+  });
+}
 
 function wiIcon(tipo, size = 16) {
   const ic = ICONS[tipo] || ICONS["Task"];
@@ -485,6 +711,22 @@ function renderNode(node, depth) {
   row.appendChild(icon);
   row.appendChild(title);
 
+  if (node.children.length) {
+    const prog = document.createElement("span");
+    prog.className = "node-prog";
+    node.progEl = prog;
+    row.appendChild(prog);
+  }
+
+  const dot = document.createElement("span");
+  dot.className = "st-dot";
+  row.appendChild(dot);
+
+  node.rowEl = row;
+  node.dotEl = dot;
+  node.wrapEl = wrap;
+  node.toggleEl = toggle;
+
   // children
   const childWrap = document.createElement("div");
   childWrap.className = "children-wrap";
@@ -494,6 +736,7 @@ function renderNode(node, depth) {
   childrenDiv.className = "children";
   node.children.forEach(c => childrenDiv.appendChild(renderNode(c, depth + 1)));
   childWrap.appendChild(childrenDiv);
+  node.childrenEl = childrenDiv;
 
   row.addEventListener("click", e => {
     e.stopPropagation();
@@ -558,6 +801,23 @@ function renderDetail(node) {
   idEl.textContent = node.ado_id ? `#${node.ado_id}` : `CSV-${node.csv_id}`;
   hdr.appendChild(bigIcon); hdr.appendChild(typeLabel);
   hdr.appendChild(sep); hdr.appendChild(idEl);
+
+  // status segmented control
+  const seg = document.createElement("div"); seg.className = "status-seg";
+  STATUSES.forEach(st => {
+    const b = document.createElement("button");
+    b.classList.add(ST_CLS[st]);
+    const d = document.createElement("span"); d.className = "dot";
+    d.style.background = ST_VAR[st];
+    b.appendChild(d);
+    b.appendChild(document.createTextNode(st));
+    b.addEventListener("click", () => setStatus(node, st));
+    seg.appendChild(b);
+  });
+  hdr.appendChild(seg);
+  currentSeg = { node, seg };
+  syncSeg(node);
+
   panel.appendChild(hdr);
 
   // body
@@ -572,6 +832,39 @@ function renderDetail(node) {
 
 const treeEl = document.getElementById("tree");
 roots.forEach(r => treeEl.appendChild(renderNode(r, 0)));
+
+// filter chips
+const fb = document.getElementById("filterbar");
+["Todos", ...STATUSES].forEach(f => {
+  const b = document.createElement("button");
+  b.className = "chip" + (f === filter ? " active" : "");
+  if (f !== "Todos") {
+    const d = document.createElement("span"); d.className = "dot";
+    d.style.background = ST_VAR[f];
+    b.appendChild(d);
+  }
+  b.appendChild(document.createTextNode(f));
+  b.addEventListener("click", () => {
+    filter = f;
+    fb.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+    b.classList.add("active");
+    applyFilter();
+  });
+  fb.appendChild(b);
+});
+
+// export status overrides
+document.getElementById("export-btn").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(overrides, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "status_updates.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+Object.values(map).forEach(refreshNode);
+updateHeader();
 
 document.querySelectorAll(".node-row[data-id]").forEach(row => {
   const n = map[parseInt(row.dataset.id)];
