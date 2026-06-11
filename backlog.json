@@ -493,6 +493,71 @@
       "estimativa_horas": 8,
       "tags": "tooling tfs backlog skill claude-code",
       "ado_id": ""
+    },
+    {
+      "csv_id": 138,
+      "tipo": "Product Backlog Item",
+      "titulo": "Estudo de Limite de Caracteres das Cartas de Servico (cruzamento-carta)",
+      "descricao": "Levantar quantos caracteres a maioria das cartas de servico utiliza para avaliar se faz sentido criar limite de caracteres. Contexto: aproveitar repo C:\\Users\\Fabio\\Documents\\SETDIG\\2026\\projetos\\cruzamento-carta e criar nova sessao trazendo este estudo.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 102,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "cartas-servico",
+      "ado_id": ""
+    },
+    {
+      "csv_id": 139,
+      "tipo": "Product Backlog Item",
+      "titulo": "Remocao de Itens do Portal MS - Periodo Eleitoral 2026",
+      "descricao": "Remover itens do ms.gov.br referentes ao periodo eleitoral, com base no documento C:\\Users\\Fabio\\Downloads\\Alteracoes periodo eleitoral 2026 (1).docx",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "governanca;eleitoral",
+      "ado_id": ""
+    },
+    {
+      "csv_id": 140,
+      "tipo": "Product Backlog Item",
+      "titulo": "Atualizacao do Prototipo da Carta de Servico pos-Workshop",
+      "descricao": "Atualizar prototipo da carta de servico com base no resultado do workshop de ontem. Referencia: C:\\Users\\Fabio\\Downloads\\WhatsApp Image 2026-06-11 at 09.28.43.jpeg",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 102,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "cartas-servico;prototipo",
+      "ado_id": ""
+    },
+    {
+      "csv_id": 141,
+      "tipo": "Product Backlog Item",
+      "titulo": "Apresentacao Indice ABEP p/ Comite",
+      "descricao": "Consultar vault Obsidian sobre ABEP e montar apresentacao simples (2-3 slides) sobre o indice ABEP para o comite: slide 1 = indice e nossos resultados passados; slide 2 = dimensao da linguagem simples e como avaliam.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 122,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "abep;comite;linguagem-simples",
+      "ado_id": ""
+    },
+    {
+      "csv_id": 142,
+      "tipo": "Product Backlog Item",
+      "titulo": "Apresentacao MAD - Acessibilidade & SEO x Linguagem Simples p/ Comite",
+      "descricao": "Mostrar ao comite que acessibilidade e SEO impactam linguagem simples e que a SETDIG mede isso (MAD - Monitor de Acessibilidade Digital). Slide-chave: explicar o que sao os indicadores - Acessibilidade (quao bem o site serve pessoas com deficiencia, ex. 96) e SEO (quao otimizado p/ ser encontrado, ex. 92) e a ponte com linguagem simples. Ref Canva: https://www.canva.com/design/DAHMRauLCl4/LR-D0EouQSTVknqX9tiMdA/edit",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 122,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "mad;acessibilidade;seo;linguagem-simples;comite",
+      "ado_id": ""
     }
   ]
 }
