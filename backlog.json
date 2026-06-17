@@ -601,6 +601,20 @@
       "tags": "mad;acessibilidade;seo;linguagem-simples;comite",
       "ado_id": "",
       "status": "A fazer"
+    },
+    {
+      "csv_id": 143,
+      "tipo": "Product Backlog Item",
+      "titulo": "Modelo de Governança de Conteúdo e Estrutura de Projetos (GCS) — padronização de pastas, PoC X-Via",
+      "descricao": "**História do usuário**\nComo equipe de projetos da SETDIG, quero um padrão de organização de pastas e artefatos na rede interna (Z:), para localizar documentos rapidamente e eliminar retrabalho e duplicidade.\n\n**Requisitos**\n- Modelo GCS reaproveitável: princípios, estrutura padrão, regras de nomeação e versionamento\n- Mapa da estrutura atual do X-Via (diagnóstico das dores)\n- Mapa da estrutura ideal (GCS aplicado, cada artefato posicionado)\n- Caso aplicado X-Via com antes x depois e métricas\n- Versões DOCX com timbrado oficial SETDIG\n- Repositório privado versionado no GitHub\n\n**Critérios de Aceitação**\n- ETP final alcançável em no máximo 3 cliques na estrutura proposta\n- Profundidade máxima de 3 níveis de pasta\n- Zero arquivos duplicados (fonte única da verdade)\n- Nomeação padronizada: minúsculas, prefixo NN-, kebab-case, datas ISO [AAAA-MM-DD]\n- Documentos GCS aprovados e publicados (Markdown + DOCX timbrado)",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 115,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "governanca,gcs,xvia,documentacao",
+      "ado_id": "",
+      "status": "A fazer"
     }
   ]
 }
