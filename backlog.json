@@ -615,6 +615,76 @@
       "tags": "governanca,gcs,xvia,documentacao",
       "ado_id": "",
       "status": "A fazer"
+    },
+    {
+      "csv_id": 144,
+      "tipo": "Product Backlog Item",
+      "titulo": "TODO do dia — DS-MS Storybook, revisão Duda, rename projeto, envio XVia (2026-06-22)",
+      "descricao": "",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 1,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 145,
+      "tipo": "Task",
+      "titulo": "Deixar Storybook DS-MS fiel à documentação dos componentes",
+      "descricao": "",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 144,
+      "prioridade": 1,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 146,
+      "tipo": "Task",
+      "titulo": "Revisar conteúdo do Storybook que não consegue atualizar (pedido Duda)",
+      "descricao": "",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 144,
+      "prioridade": 1,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 147,
+      "tipo": "Task",
+      "titulo": "Renomear projeto \"Maturidade Digital\" -> \"Censo de Serviços Digitais\"",
+      "descricao": "",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 144,
+      "prioridade": 1,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 148,
+      "tipo": "Task",
+      "titulo": "Encaminhar documentação/gravação a maycon.lisboa@xvia.com.br e aylime.queiroz@xvia.com.br",
+      "descricao": "",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 144,
+      "prioridade": 1,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
     }
   ]
 }
