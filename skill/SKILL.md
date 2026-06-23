@@ -1,6 +1,9 @@
 # /tfs — Inserir item no backlog TFS SETDIG
 
-Insere um novo work item em `C:\Users\framos\Documents\SETDIG\2026\Projetos\setdig-tfs-backlog\backlog.xlsx` a partir de linguagem natural, respeitando a hierarquia oficial do TFS/Azure DevOps da SETDIG, e regenera `backlog_viewer.html`.
+Insere um novo work item direto em `C:\Users\Fabio\Documents\SETDIG\2026\tfs\backlog.json` (fonte da verdade) a partir de linguagem natural, respeitando a hierarquia oficial do TFS/Azure DevOps da SETDIG, regenera o viewer via `build.py` e publica no GitHub Pages com **commit semântico automático + push**.
+
+**Repo:** `https://github.com/fabioramos-02/setdig-tfs-backlog` (público, branch `master`, GitHub Pages).
+**Fonte da verdade:** `backlog.json` (NÃO o xlsx — o xlsx é legado/autoria em massa opcional).
 
 ## Quando invocar
 
@@ -54,12 +57,13 @@ Outros Epics oficiais (não estão no xlsx ainda — incluir como placeholder se
 ### 1. Ler o backlog atual
 
 ```python
-import openpyxl
-wb = openpyxl.load_workbook(r"C:\Users\framos\Documents\SETDIG\2026\Projetos\setdig-tfs-backlog\backlog.xlsx", data_only=True)
-ws = wb["Backlog"]
+import json
+PATH = r"C:\Users\Fabio\Documents\SETDIG\2026\tfs\backlog.json"
+data = json.load(open(PATH, encoding="utf-8"))
+items = data["items"]
 ```
 
-Extrair: lista de itens existentes (csv_id, tipo, titulo, csv_id_pai) e `max(csv_id)`.
+Extrair: lista de itens existentes (`csv_id`, `tipo`, `titulo`, `csv_id_pai`) e `max(csv_id)`.
 
 ### 2. Inferir os campos
 
@@ -171,25 +175,59 @@ Descrição:
 
 Perguntar: **"Inserir? (s/n)"**
 
-### 5. Inserir na planilha
+### 5. Inserir no backlog.json
 
 ```python
-ws.append([csv_id, tipo, titulo, descricao, "SETDIG", csv_id_pai, prioridade, sprint, estimativa_horas, tags, ""])
-wb.save(r"C:\Users\framos\Documents\SETDIG\2026\Projetos\setdig-tfs-backlog\backlog.xlsx")
+items.append({
+    "csv_id": csv_id,
+    "tipo": tipo,
+    "titulo": titulo,
+    "descricao": descricao,
+    "projeto_ado": "SETDIG",
+    "csv_id_pai": csv_id_pai,
+    "prioridade": prioridade,
+    "sprint": sprint,
+    "estimativa_horas": estimativa_horas,
+    "tags": tags,
+    "ado_id": "",
+    "status": "A fazer",
+})
+json.dump(data, open(PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 ```
 
-### 6. Regenerar HTML
+Status novo **sempre** `A fazer`. Manter os 12 campos do schema.
+
+### 6. Regenerar viewer (build.py)
 
 ```python
 import subprocess
-subprocess.run(["python", r"C:\Users\framos\Documents\SETDIG\2026\Projetos\setdig-tfs-backlog\xlsx_to_json.py"])
+subprocess.run(["python", r"C:\Users\Fabio\Documents\SETDIG\2026\tfs\build.py"], check=True)
 ```
 
-Confirmar: `[OK] Item inserido. HTML atualizado.`
+`build.py` carimba `generated_at` (nova versão) e injeta o DATA inline no `backlog_viewer.html`. Não depende de openpyxl.
+
+### 7. Commit semântico + push (automático)
+
+Sem perguntar — após o build, publicar:
+
+```bash
+cd "C:/Users/Fabio/Documents/SETDIG/2026/tfs"
+git add backlog.json backlog_viewer.html
+git commit -m "feat(backlog): adiciona <Tipo> <csv_id> — <titulo curto>"
+git push
+```
+
+Regras do commit:
+- Tipo Conventional Commits sempre `feat(backlog):` para item novo (`fix(backlog):` se for correção de item existente).
+- Mensagem em português, `<titulo curto>` ≤ 60 chars, sem assinatura de IA.
+- 1 item = 1 commit. Vários itens na mesma chamada = 1 commit consolidado descrevendo o conjunto.
+- GitHub Pages redeploya sozinho no push (~1 min). URL pública servida pelo `index.html` → `backlog_viewer.html`.
+
+Confirmar: `[OK] Item <csv_id> inserido, buildado e publicado (push em master).`
 
 ## Contexto do projeto (para inferências)
 
-**Repo de analytics:** `C:\Users\framos\Documents\SETDIG\2026\Projetos\matomo\matomo-analytics-dashboard`
+**Repo de analytics:** `C:\Users\Fabio\Documents\SETDIG\2026\projetos\matomo\matomo-analytics-dashboard`
 
 Arquivos-chave:
 - `app.py` — interface Streamlit
@@ -198,7 +236,7 @@ Arquivos-chave:
 - `utils/data_processor.py` — processamento e regex de cartas
 - `config.py` — tokens e IDs
 
-**Repo de cruzamento:** `C:\Users\framos\Documents\SETDIG\2026\Projetos\cruzamento-carta`
+**Repo de cruzamento:** `C:\Users\Fabio\Documents\SETDIG\2026\projetos\cruzamento-carta`
 
 Arquivos-chave:
 - `src/cruzamento_carta/db.py` — conexão via .env
@@ -222,15 +260,16 @@ Se o usuário mencionar algo relacionado a essas fontes ou arquivos, usar para e
 - Manter tipos exatos: `Epic`, `Feature`, `Product Backlog Item`, `Task`, `Bug`.
 - Respeitar hierarquia TFS: Epic → Feature → PBI → Task. Sem Feature dentro de Feature.
 - Descrição **sempre** segue o padrão TFS do tipo correspondente.
-- Sempre rodar `xlsx_to_json.py` após salvar.
+- Sempre rodar `python build.py` após editar o `backlog.json`, e em seguida commit + push (sem perguntar).
 - Itens placeholder (100, 101, 102) ancoram itens reais do TFS — campo `ado_id` deve ser preenchido quando vinculado ao Azure DevOps.
 
 ## Status dos work items
 
-A planilha tem coluna `status` (12ª, após `ado_id`): `A fazer` | `Em progresso` | `Finalizado`.
+Campo `status` no JSON: `A fazer` | `Em progresso` | `Finalizado`. Default de item novo = `A fazer`.
 
-- Itens novos via `/tfs` **não precisam preencher** — `ws.append()` com 11 valores deixa vazio e o conversor aplica default `A fazer`.
-- O status é editável **direto no `backlog_viewer.html`** (controle segmentado no painel de detalhe). Edições ficam em `localStorage` do navegador — instantâneo, sem rodar Python.
-- Sincronização com o xlsx (opcional, quando quiser consolidar):
-  1. Clicar **"Exportar status"** no header do viewer → baixa `status_updates.json`
-  2. `python apply_status.py` (lê de `Downloads\status_updates.json` por padrão, ou passar caminho) → grava no xlsx e regenera JSON + HTML.
+**Persistência (modelo "git como banco de dados"):**
+- O status COMMITADO no `backlog.json` é a verdade pública. Para mudar o status oficial de um item: editar `status` no `backlog.json` → `python build.py` → commit + push.
+- No viewer publicado (read-only, público), qualquer pessoa pode marcar status no painel de detalhe, mas isso fica só no `localStorage` dela.
+- Cada deploy carimba `generated_at` novo. Ao dar F5 numa versão nova, o viewer **descarta os overrides locais antigos** (ver `VER_KEY` no HTML) — então o status commitado sempre vence cache velho. É exatamente o comportamento desejado: status oficial não se perde nem fica mascarado.
+
+Para mudar status de um item existente via comando, basta pedir (ex.: `/tfs status 117 = Finalizado`) → editar JSON → build → commit `fix(backlog): status <id> → Finalizado` → push.
