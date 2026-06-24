@@ -3,28 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>Relatórios semanais — Backlog TFS SETDIG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ds-sis.css">
 <style>
-  :root {
-    --brand: #244061;
-    --bg: #F5F7FA;
-    --surface: #fff;
-    --border: #E1E5EA;
-    --text: #1B1F23;
-    --text-sub: #5B6470;
-  }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-family-primary, 'IBM Plex Sans', system-ui, sans-serif);
     font-size: 14px;
-    background: var(--bg);
-    color: var(--text);
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-700);
   }
-  header {
-    background: var(--brand);
+  .topbar {
+    background: var(--color-primary-500);
     color: #fff;
     padding: 14px 24px;
     display: flex;
@@ -33,84 +23,107 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
   }
-  header h1 { font-size: 16px; font-weight: 700; margin: 0; }
-  header a { color: #fff; text-decoration: none; font-size: 13px; opacity: .85; }
-  header a:hover { opacity: 1; text-decoration: underline; }
+  .topbar h1 { font-size: 16px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+  .topbar a { color: #fff; text-decoration: none; font-size: 13px; opacity: .9; }
+  .topbar a:hover { opacity: 1; text-decoration: underline; }
+  .meta { margin-left: auto; font-size: 12px; opacity: .8; }
   .layout { display: grid; grid-template-columns: 280px 1fr; }
   aside {
-    background: var(--surface);
-    border-right: 1px solid var(--border);
-    padding: 20px;
+    background: #fff;
+    border-right: 1px solid var(--color-neutral-200);
+    padding: 24px 20px;
     position: sticky;
-    top: 48px;
+    top: 52px;
     align-self: start;
-    max-height: calc(100vh - 48px);
+    max-height: calc(100vh - 52px);
     overflow-y: auto;
   }
   aside h2 {
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: .05em;
-    color: var(--text-sub);
+    letter-spacing: .06em;
+    color: var(--color-neutral-500);
     margin: 0 0 12px;
+    font-weight: 600;
   }
   aside ul { list-style: none; padding: 0; margin: 0; }
-  aside li { margin-bottom: 4px; }
+  aside li { margin-bottom: 2px; }
   aside a {
-    color: var(--brand);
+    color: var(--color-primary-500);
     text-decoration: none;
     font-weight: 500;
     display: block;
-    padding: 6px 8px;
+    padding: 8px 10px;
     border-radius: 4px;
     font-size: 13px;
+    transition: background 120ms;
   }
-  aside a:hover { background: #EEF3FD; }
-  main { padding: 32px 48px; max-width: 900px; }
+  aside a:hover { background: var(--color-primary-100); }
+  main { padding: 32px 48px; max-width: 920px; }
   .relatorio {
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: #fff;
+    border: 1px solid var(--color-neutral-200);
     border-radius: 8px;
-    padding: 24px 32px;
+    padding: 28px 36px;
     margin-bottom: 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
   }
   .relatorio h1 {
-    font-size: 20px;
-    color: var(--brand);
-    border-bottom: 2px solid var(--brand);
-    padding-bottom: 8px;
+    font-size: 22px;
+    color: var(--color-primary-700);
+    border-bottom: 3px solid var(--color-primary-500);
+    padding-bottom: 10px;
     margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
   }
   .relatorio h2 {
-    font-size: 15px;
-    color: var(--brand);
-    margin-top: 24px;
-    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--color-primary-500);
+    background: var(--color-primary-100);
+    margin-top: 28px;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
-  .relatorio ul { padding-left: 20px; }
-  .relatorio li { margin-bottom: 6px; line-height: 1.55; }
+  .relatorio ul { padding-left: 20px; margin: 8px 0; }
+  .relatorio li { margin-bottom: 10px; line-height: 1.6; }
+  .relatorio strong { color: var(--color-neutral-800); }
   .relatorio code {
-    background: #F0F2F5;
-    padding: 1px 5px;
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-700);
+    padding: 2px 6px;
     border-radius: 3px;
     font-size: 12px;
+    font-family: 'IBM Plex Mono', monospace;
   }
-  .relatorio em { color: var(--text-sub); }
+  .relatorio em { color: var(--color-neutral-500); font-style: normal; font-size: 13px; }
   .empty {
     text-align: center;
-    color: var(--text-sub);
+    color: var(--color-neutral-500);
     padding: 80px 20px;
     font-size: 15px;
+  }
+  .empty code {
+    background: var(--color-neutral-100);
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: var(--color-primary-500);
+    font-family: 'IBM Plex Mono', monospace;
   }
 </style>
 </head>
 <body>
-<header>
+<div class="topbar">
   <h1>Relatórios semanais — SETDIG</h1>
   <a href="backlog_viewer.html">← voltar ao backlog</a>
-  <span style="margin-left:auto; font-size:12px; opacity:.7;">1 relatório(s) · gerado em 2026-06-24 09:27</span>
-</header>
+  <span class="meta">1 relatório(s) · gerado em 2026-06-24 09:38</span>
+</div>
 <div class="layout">
   <aside>
     <h2>Índice</h2>

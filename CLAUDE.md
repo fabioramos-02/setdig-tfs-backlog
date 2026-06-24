@@ -37,6 +37,12 @@ Como <papel>, quero <ação>, para <benefício>.
 
 Resumo e Local são consumidos pelo `/tfs semana` para alimentar o relatório.
 
+**Tasks filhas:** após criar um PBI, sempre oferecer geração automática de uma Task por item de Requisito (1:1). Sem isso o PBI fica sem rastreio de execução.
+
+## Design System
+
+O `relatorios.html` consome `@design-system-ms/ds-sis` (cópia em `assets/ds-sis.css`). Sem hardcode de cor — usar tokens (`--color-primary-500`, `--color-neutral-*`, etc.). Para atualizar a biblioteca: `cd /tmp && npm pack @design-system-ms/ds-sis@<v>` → copiar `dist/css/ds-sis.css` para `assets/`.
+
 ## Status (`status` no JSON)
 
 Valores: `A fazer` | `Em progresso` | `Finalizado` | `Impedido`.
