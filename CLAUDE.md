@@ -45,9 +45,18 @@ Resumo e Local são consumidos pelo `/tfs semana` para alimentar o relatório.
 
 **Tasks filhas:** após criar um PBI, sempre oferecer geração automática de uma Task por item de Requisito (1:1). Sem isso o PBI fica sem rastreio de execução.
 
-## Design System
+## Design System e arquitetura de assets
 
-O `relatorios.html` consome `@design-system-ms/ds-sis` (cópia em `assets/ds-sis.css`). Sem hardcode de cor — usar tokens (`--color-primary-500`, `--color-neutral-*`, etc.). Para atualizar a biblioteca: `cd /tmp && npm pack @design-system-ms/ds-sis@<v>` → copiar `dist/css/ds-sis.css` para `assets/`.
+Tudo consome `assets/ds-sis.css` (cópia do `@design-system-ms/ds-sis`). Sem hardcode de cor — usar tokens (`--color-primary-500`, `--color-neutral-*`, etc.). Atualizar lib: `cd /tmp && npm pack @design-system-ms/ds-sis@<v>` → copiar `dist/css/ds-sis.css` para `assets/`.
+
+Layout do `assets/`:
+- `assets/ds-sis.css` — biblioteca DS-MS (tokens + componentes)
+- `assets/css/viewer.css` — estilos específicos do backlog viewer
+- `assets/css/relatorios.css` — estilos específicos dos relatórios
+- `assets/js/data.js` — gerado, contém `window.BACKLOG_DATA`
+- `assets/js/viewer.js` — lógica do viewer (lê `window.BACKLOG_DATA`)
+
+`backlog_viewer.html` é shell (~57 linhas) — sem `<style>` ou `<script>` inline. Tudo via `<link>` e `<script src>`. Funciona em `file://` (duplo-clique local) e no GitHub Pages.
 
 ## Status (`status` no JSON)
 
@@ -70,8 +79,8 @@ A skill anexa `**Impedimento**\n<motivo>` à descrição. Ao mudar para outro st
 
 ## Fluxo após editar `backlog.json`
 
-1. `python build.py` → regenera `backlog_viewer.html` e `relatorios.html`, carimba `generated_at`.
-2. `git add backlog.json backlog_viewer.html relatorios.html relatorios/`.
+1. `python build.py` → reescreve `assets/js/data.js` (DATA injetado entre marcadores) e regera `relatorios.html`; carimba `generated_at`.
+2. `git add backlog.json assets/js/data.js relatorios.html relatorios/`.
 3. Commit semântico:
    - PBI/Task/Feature/Bug: `feat(backlog): adiciona <Tipo> <csv_id> — <titulo curto>`
    - Status: `fix(backlog): status <id> → <novo>`

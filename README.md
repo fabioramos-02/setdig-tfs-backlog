@@ -24,18 +24,28 @@ Publicado **gratuitamente no GitHub Pages** (estático, read-only, público).
 
 ```
 setdig-tfs-backlog/
-├── backlog.json          # Fonte da verdade (editar aqui ou via /tfs)
-├── build.py              # backlog.json + relatorios/*.md → viewer + relatorios.html
-├── backlog_viewer.html   # Viewer (gerado/injetado)
-├── relatorios.html       # Hub de relatórios semanais renderizados (gerado)
-├── relatorios/           # Markdowns semanais (gerados por /tfs semana)
+├── backlog.json              # Fonte da verdade (editar aqui ou via /tfs)
+├── build.py                  # gera assets/js/data.js + relatorios.html
+├── backlog_viewer.html       # Shell do viewer (link CSS/JS, sem inline)
+├── relatorios.html           # Hub de relatórios semanais (gerado)
+├── index.html                # Entrada do GitHub Pages
+├── requirements.txt          # Dependência: markdown
+├── CLAUDE.md                 # Convenções do projeto
+├── assets/
+│   ├── ds-sis.css            # Design System MS (@design-system-ms/ds-sis)
+│   ├── css/
+│   │   ├── viewer.css        # Estilos do backlog viewer
+│   │   └── relatorios.css    # Estilos da página de relatórios
+│   └── js/
+│       ├── data.js           # Gerado: window.BACKLOG_DATA = {...}
+│       └── viewer.js         # Lógica do viewer (tree, detail, filtros, md)
+├── relatorios/
 │   └── [YYYY-MM-DD]-relatorio-semanal.md
-├── index.html            # Entrada do GitHub Pages → redireciona pro viewer
-├── requirements.txt      # Dependência: markdown (render md → html)
-├── CLAUDE.md             # Convenções do projeto
 └── docs/
-    └── TFS.pdf           # Padrão TFS SETDIG v1 jul/2024 (referência)
+    └── TFS.pdf               # Padrão TFS SETDIG v1 jul/2024
 ```
+
+Arquitetura **self-contained**: nenhum fetch em runtime. `assets/js/data.js` é carregado como script comum (funciona em `file://` e no Pages); `build.py` reescreve seu blob entre marcadores `/*DATA_START*/.../*DATA_END*/`.
 
 Skill `/tfs` (Claude Code) instalada globalmente em `~/.claude/skills/tfs/SKILL.md` — não versionada neste repo.
 
