@@ -194,7 +194,7 @@ header {
 }
 .toggle svg { width: 10px; height: 10px; display: block; }
 .toggle:hover { background: var(--border); color: var(--text); }
-.toggle.open { transform: rotate(90deg); }
+.toggle.open { transform: rotate(180deg); }
 .toggle.leaf { opacity: 0; pointer-events: none; }
 .node-row.selected .toggle { color: var(--color-primary-500); }
 
