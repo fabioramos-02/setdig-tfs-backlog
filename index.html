@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=./backlog_viewer.html">
-<title>Backlog TFS — SETDIG</title>
-<link rel="canonical" href="./backlog_viewer.html">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backlog — SETDIG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ds-sis.css">
+<link rel="stylesheet" href="assets/css/viewer.css">
 </head>
 <body>
-<p>Redirecionando para o <a href="./backlog_viewer.html">Backlog TFS — SETDIG</a>…</p>
+
+<header>
+  <div class="hdr-brand">
+    <div class="hdr-brand-icon">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1h6v6H1zM9 1h6v6H9zM1 9h6v6H1zM9 9h6v6H9z" fill="white" opacity=".9"/>
+      </svg>
+    </div>
+    <div>
+      <div class="hdr-org">SETDIG</div>
+      <div class="hdr-team">SGD — EDS Team</div>
+    </div>
+  </div>
+  <span class="hdr-title">Backlog · Dashboard Analítico Portal Único MS</span>
+  <div class="hdr-right">
+    <span class="hdr-stat"><span class="dot" style="background:var(--s-todo)"></span><span id="cnt-todo">0</span></span>
+    <span class="hdr-stat"><span class="dot" style="background:var(--s-prog)"></span><span id="cnt-prog">0</span></span>
+    <span class="hdr-stat"><span class="dot" style="background:var(--s-done)"></span><span id="cnt-done">0</span></span>
+    <div class="hdr-progress"><div class="hdr-progress-fill" id="hdr-fill"></div></div>
+    <span class="hdr-pct" id="hdr-pct">0%</span>
+    <a class="hdr-link" href="relatorios.html" aria-label="Abrir relatórios semanais">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7l3 3v7a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M10 3v3h3M5 9h6M5 11h4"/></svg>
+      Relatórios
+    </a>
+    <span class="hdr-pill" id="hdr-count">— items</span>
+  </div>
+</header>
+
+<div class="layout">
+  <div class="tree-panel">
+    <div class="filter-bar" id="filterbar"></div>
+    <div id="tree"></div>
+  </div>
+  <div class="detail-panel" id="detail">
+    <div class="empty-state">
+      <div class="empty-icon">⊞</div>
+      <div class="empty-msg">Selecione um work item</div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/viewer.js"></script>
 </body>
 </html>

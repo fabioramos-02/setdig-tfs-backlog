@@ -5,7 +5,7 @@ build.py — Regenera o viewer e a página de relatórios a partir de:
 
 Fluxo:
   1. backlog.json -> carimba generated_at -> injeta blob DATA entre os marcadores
-     /*DATA_START*/.../*DATA_END*/ no backlog_viewer.html
+     /*DATA_START*/.../*DATA_END*/ no index.html
   2. relatorios/*.md -> renderiza inline em relatorios.html (self-contained)
 
 Sem dependência de openpyxl/xlsx. Requer pip install markdown (ver requirements.txt).
@@ -84,7 +84,7 @@ RELATORIOS_TEMPLATE = """<!DOCTYPE html>
 </head>
 <body>
 <div class="topbar">
-  <a class="back-btn" href="backlog_viewer.html" aria-label="Voltar ao backlog">
+  <a class="back-btn" href="index.html" aria-label="Voltar ao backlog">
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12L6 8l4-4"/></svg>
     Backlog
   </a>

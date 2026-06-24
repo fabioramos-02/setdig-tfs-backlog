@@ -56,7 +56,7 @@ Layout do `assets/`:
 - `assets/js/data.js` — gerado, contém `window.BACKLOG_DATA`
 - `assets/js/viewer.js` — lógica do viewer (lê `window.BACKLOG_DATA`)
 
-`backlog_viewer.html` é shell (~57 linhas) — sem `<style>` ou `<script>` inline. Tudo via `<link>` e `<script src>`. Funciona em `file://` (duplo-clique local) e no GitHub Pages.
+`index.html` é shell (~57 linhas) — sem `<style>` ou `<script>` inline. Tudo via `<link>` e `<script src>`. Funciona em `file://` (duplo-clique local) e no GitHub Pages.
 
 ## Status (`status` no JSON)
 
@@ -75,7 +75,7 @@ A skill anexa `**Impedimento**\n<motivo>` à descrição. Ao mudar para outro st
 - Geração: `/tfs semana [N]` (default N = 7 dias).
 - Render: `build.py` converte todos `relatorios/*.md` para HTML inline → `relatorios.html` (self-contained, sem fetch).
 - Publicação: `https://fabioramos-02.github.io/setdig-tfs-backlog/relatorios.html`.
-- Acesso no viewer: botão "Relatórios" no header do `backlog_viewer.html`.
+- Acesso no viewer: botão "Relatórios" no header do `index.html`.
 
 ## Fluxo após editar `backlog.json`
 

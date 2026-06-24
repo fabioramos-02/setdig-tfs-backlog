@@ -11,11 +11,11 @@ Publicado **gratuitamente no GitHub Pages** (estático, read-only, público).
 /tfs (Claude Code)            GitHub                    Público
   edita backlog.json  ──push──►  Pages serve  ──F5──►  só LÊ o viewer
   build.py injeta no HTML        index.html             status commitado
-  commit semântico               + backlog_viewer.html  vence cache local
+  commit semântico               + index.html  vence cache local
 ```
 
 - **`backlog.json`** — fonte da verdade (49+ work items + `generated_at`).
-- **`backlog_viewer.html`** — viewer self-contained (DATA injetado inline; abre com duplo-clique e no Pages, sem fetch/CORS).
+- **`index.html`** — viewer self-contained (DATA injetado inline; abre com duplo-clique e no Pages, sem fetch/CORS).
 - **`build.py`** — lê o JSON, carimba `generated_at` e injeta no HTML.
 - **`index.html`** — entrada do GitHub Pages → redireciona pro viewer.
 - Sem API, sem banco, sem servidor. Persistência = commit versionado.
@@ -26,9 +26,8 @@ Publicado **gratuitamente no GitHub Pages** (estático, read-only, público).
 setdig-tfs-backlog/
 ├── backlog.json              # Fonte da verdade (editar aqui ou via /tfs)
 ├── build.py                  # gera assets/js/data.js + relatorios.html
-├── backlog_viewer.html       # Shell do viewer (link CSS/JS, sem inline)
+├── index.html                # Viewer do backlog (Pages serve direto)
 ├── relatorios.html           # Hub de relatórios semanais (gerado)
-├── index.html                # Entrada do GitHub Pages
 ├── requirements.txt          # Dependência: markdown
 ├── CLAUDE.md                 # Convenções do projeto
 ├── assets/
@@ -55,7 +54,7 @@ Skill `/tfs` (Claude Code) instalada globalmente em `~/.claude/skills/tfs/SKILL.
 
 🔗 **Relatórios online:** https://fabioramos-02.github.io/setdig-tfs-backlog/relatorios.html
 
-O `backlog_viewer.html` tem um botão "Relatórios" no header que leva para a página.
+O `index.html` tem um botão "Relatórios" no header que leva para a página.
 
 Skill `/tfs` (Claude Code) instalada globalmente em `~/.claude/skills/tfs/SKILL.md` — não versionada neste repo.
 
@@ -94,14 +93,14 @@ Esse padrão alimenta o subcomando `/tfs semana`, que filtra PBIs por data parse
 # 2. regenerar o viewer
 python build.py
 # 3. publicar
-git add backlog.json backlog_viewer.html && git commit -m "feat(backlog): ..." && git push
+git add backlog.json assets/js/data.js && git commit -m "feat(backlog): ..." && git push
 ```
 
 > O `backlog.xlsx` e o pipeline `xlsx_to_json.py` foram removidos em 2026-06-24. O JSON é a única fonte; `build.py` injeta inline no viewer.
 
 ### Visualizar local
 
-Abrir `backlog_viewer.html` com duplo-clique (funciona offline, dados inline).
+Abrir `index.html` com duplo-clique (funciona offline, dados inline).
 
 ## Persistência de status
 
