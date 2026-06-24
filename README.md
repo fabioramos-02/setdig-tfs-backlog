@@ -23,15 +23,17 @@ Publicado **gratuitamente no GitHub Pages** (estático, read-only, público).
 ## Estrutura
 
 ```
-tfs/
+setdig-tfs-backlog/
 ├── backlog.json          # Fonte da verdade (editar aqui ou via /tfs)
 ├── build.py              # backlog.json → injeta DATA no viewer
 ├── backlog_viewer.html   # Viewer (gerado/injetado)
-├── index.html            # Entrada do GitHub Pages
-├── backlog.xlsx          # Legado (autoria em massa opcional)
-├── xlsx_to_json.py       # Legado: xlsx → json
-└── skill/SKILL.md        # Skill /tfs para Claude Code
+├── index.html            # Entrada do GitHub Pages → redireciona pro viewer
+├── CLAUDE.md             # Convenções do projeto (formato título PBI, fluxo)
+└── docs/
+    └── TFS.pdf           # Padrão TFS SETDIG v1 jul/2024 (referência)
 ```
+
+Skill `/tfs` (Claude Code) instalada globalmente em `~/.claude/skills/tfs/SKILL.md` — não versionada neste repo.
 
 ## Como usar
 
@@ -41,21 +43,37 @@ No Claude Code, na pasta do repo:
 
 ```
 /tfs Task: ajustar regex de Cartas de Serviço em data_processor.py
-/tfs PBI: como gestor quero ver cartas duplicadas entre órgãos diferentes
+/tfs PBI: [X-VIA] Ajustes nos documentos - 23-06-2026
 /tfs status 117 = Finalizado
+/tfs semana             # resumo dos PBIs dos últimos 7 dias (reunião de planejamento)
+/tfs semana 14          # últimos 14 dias
 ```
 
 A skill insere no `backlog.json`, roda `build.py` e faz **commit semântico + push** automático. O GitHub Pages redeploya sozinho (~1 min).
 
+### Convenção de título PBI (obrigatória)
+
+Todo PBI segue o formato:
+
+```
+[PROJETO] demanda - DD-MM-YYYY
+```
+
+Exemplo: `[X-VIA] Ajustes nos documentos - 23-06-2026`
+
+Esse padrão alimenta o subcomando `/tfs semana`, que filtra PBIs por data parseada do próprio título e agrupa por `[PROJETO]` — usado para responder rápido "o que foi feito na semana passada" em reuniões de planejamento. Task/Feature/Epic/Bug mantêm título livre.
+
 ### Editar à mão
 
 ```bash
-# 1. editar backlog.json
+# 1. editar backlog.json (única fonte da verdade)
 # 2. regenerar o viewer
 python build.py
 # 3. publicar
 git add backlog.json backlog_viewer.html && git commit -m "feat(backlog): ..." && git push
 ```
+
+> O `backlog.xlsx` e o pipeline `xlsx_to_json.py` foram removidos em 2026-06-24. O JSON é a única fonte; `build.py` injeta inline no viewer.
 
 ### Visualizar local
 
