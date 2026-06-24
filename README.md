@@ -25,13 +25,27 @@ Publicado **gratuitamente no GitHub Pages** (estático, read-only, público).
 ```
 setdig-tfs-backlog/
 ├── backlog.json          # Fonte da verdade (editar aqui ou via /tfs)
-├── build.py              # backlog.json → injeta DATA no viewer
+├── build.py              # backlog.json + relatorios/*.md → viewer + relatorios.html
 ├── backlog_viewer.html   # Viewer (gerado/injetado)
+├── relatorios.html       # Hub de relatórios semanais renderizados (gerado)
+├── relatorios/           # Markdowns semanais (gerados por /tfs semana)
+│   └── [YYYY-MM-DD]-relatorio-semanal.md
 ├── index.html            # Entrada do GitHub Pages → redireciona pro viewer
-├── CLAUDE.md             # Convenções do projeto (formato título PBI, fluxo)
+├── requirements.txt      # Dependência: markdown (render md → html)
+├── CLAUDE.md             # Convenções do projeto
 └── docs/
     └── TFS.pdf           # Padrão TFS SETDIG v1 jul/2024 (referência)
 ```
+
+Skill `/tfs` (Claude Code) instalada globalmente em `~/.claude/skills/tfs/SKILL.md` — não versionada neste repo.
+
+## Relatórios semanais
+
+`/tfs semana [N]` gera um arquivo `relatorios/[YYYY-MM-DD]-relatorio-semanal.md` listando PBIs criados nos últimos N dias (default 7), agrupados por `[PROJETO]`, com resumo, status e referência ao local de trabalho. Após gerar, o `build.py` converte todos os relatórios em HTML inline (sem fetch) e publica em:
+
+🔗 **Relatórios online:** https://fabioramos-02.github.io/setdig-tfs-backlog/relatorios.html
+
+O `backlog_viewer.html` tem um botão "Relatórios" no header que leva para a página.
 
 Skill `/tfs` (Claude Code) instalada globalmente em `~/.claude/skills/tfs/SKILL.md` — não versionada neste repo.
 

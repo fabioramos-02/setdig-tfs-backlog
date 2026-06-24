@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Relatórios semanais — Backlog TFS SETDIG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #244061;
+    --bg: #F5F7FA;
+    --surface: #fff;
+    --border: #E1E5EA;
+    --text: #1B1F23;
+    --text-sub: #5B6470;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    background: var(--brand);
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 { font-size: 16px; font-weight: 700; margin: 0; }
+  header a { color: #fff; text-decoration: none; font-size: 13px; opacity: .85; }
+  header a:hover { opacity: 1; text-decoration: underline; }
+  .layout { display: grid; grid-template-columns: 280px 1fr; }
+  aside {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 20px;
+    position: sticky;
+    top: 48px;
+    align-self: start;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+  }
+  aside h2 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--text-sub);
+    margin: 0 0 12px;
+  }
+  aside ul { list-style: none; padding: 0; margin: 0; }
+  aside li { margin-bottom: 4px; }
+  aside a {
+    color: var(--brand);
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  aside a:hover { background: #EEF3FD; }
+  main { padding: 32px 48px; max-width: 900px; }
+  .relatorio {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 32px;
+    margin-bottom: 24px;
+  }
+  .relatorio h1 {
+    font-size: 20px;
+    color: var(--brand);
+    border-bottom: 2px solid var(--brand);
+    padding-bottom: 8px;
+    margin-top: 0;
+  }
+  .relatorio h2 {
+    font-size: 15px;
+    color: var(--brand);
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+  .relatorio ul { padding-left: 20px; }
+  .relatorio li { margin-bottom: 6px; line-height: 1.55; }
+  .relatorio code {
+    background: #F0F2F5;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  .relatorio em { color: var(--text-sub); }
+  .empty {
+    text-align: center;
+    color: var(--text-sub);
+    padding: 80px 20px;
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Relatórios semanais — SETDIG</h1>
+  <a href="backlog_viewer.html">← voltar ao backlog</a>
+  <span style="margin-left:auto; font-size:12px; opacity:.7;">1 relatório(s) · gerado em 2026-06-24 09:27</span>
+</header>
+<div class="layout">
+  <aside>
+    <h2>Índice</h2>
+    <ul><li><a href="#[2026-06-24]-relatorio-semanal">2026-06-24</a></li></ul>
+  </aside>
+  <main>
+    <section class="relatorio" id="[2026-06-24]-relatorio-semanal"><h1>Relatório semanal — 17/06 a 24/06</h1>
+<p><em>Gerado em 2026-06-24 às 09:26 (últimos 7 dias, 5 PBIs).</em></p>
+<h2>[CARTAS]</h2>
+<ul>
+<li><strong>Extracoes de demandas SEFAZ/Financas</strong> (24-06) — Finalizado — Entreguei 4 extracoes para SEFAZ e Financas. <em>Local: <code>C:\Users\framos\Documents\SETDIG\2026\Projetos\extracao-carta</code></em></li>
+</ul>
+<h2>[CENSO]</h2>
+<ul>
+<li><strong>Renomeacao do projeto e mapeamento SEAD</strong> (24-06) — Finalizado — Renomeei projeto e iniciei mapeamento SEAD. <em>Local: <code>C:\Users\framos\Documents\SETDIG\2026\Projetos\mapeamento-inicial-servicos-digitais</code></em></li>
+</ul>
+<h2>[DS-MS]</h2>
+<ul>
+<li><strong>POC Storybook do Design System MS</strong> (24-06) — Finalizado — Apresentei Storybook e POC rodando. <em>Local: <code>C:\Users\framos\Documents\SETDIG\2026\Projetos\DS-MS-Design-System\poc</code></em></li>
+</ul>
+<h2>[X-VIA]</h2>
+<ul>
+<li><strong>Onboarding analista de negocio</strong> (24-06) — Finalizado — Apresentei GDI e SETDIG para analista nova da XVia.</li>
+<li><strong>Alinhamento com Brenda sobre documento</strong> (24-06) — Finalizado — Fechei lista de ajustes do documento com a Brenda. <em>Local: <code>C:\Users\framos\Documents\SETDIG\2026\Projetos\documentacao-xvia</code></em></li>
+</ul></section>
+  </main>
+</div>
+</body>
+</html>
