@@ -187,7 +187,7 @@ function renderNode(node, depth) {
 
   const toggle = document.createElement("span");
   toggle.className = "toggle" + (node.children.length ? "" : " leaf");
-  toggle.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>';
+  toggle.innerHTML = '<svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><polygon points="2,4 10,4 6,9" fill="#545d64"/></svg>';
 
   const icon = wiIcon(node.tipo, 16);
 

@@ -192,21 +192,13 @@ header {
   cursor: pointer;
   padding: 0;
 }
-.toggle svg {
-  width: 11px;
-  height: 11px;
-  display: block;
-  fill: none;
-  stroke: var(--color-neutral-600);
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
+.toggle svg { display: block; }
+.toggle svg polygon { fill: var(--color-neutral-600); }
 .toggle:hover { background: var(--border); }
-.toggle:hover svg { stroke: var(--color-neutral-800); }
+.toggle:hover svg polygon { fill: var(--color-neutral-800); }
 .toggle.open { transform: rotate(180deg); }
 .toggle.leaf { opacity: 0; pointer-events: none; }
-.node-row.selected .toggle svg { stroke: var(--color-primary-500); }
+.node-row.selected .toggle svg polygon { fill: var(--color-primary-500); }
 
 .title-text {
   flex: 1;
