@@ -685,7 +685,77 @@
       "tags": "",
       "ado_id": "",
       "status": "A fazer"
+    },
+    {
+      "csv_id": 149,
+      "tipo": "Product Backlog Item",
+      "titulo": "[CARTAS] Extracoes de demandas SEFAZ/Financas - 24-06-2026",
+      "descricao": "**Historia do usuario**\nComo analista, quero entregar quatro extracoes de cartas de servico solicitadas pela SEFAZ e area de Financas, para que essas areas tenham os dados que precisam para revisar servicos.\n\n**Requisitos**\n- Entregar categorias de cartas pedidas pela SEFAZ.\n- Identificar servicos ausentes na area de Financas e Impostos.\n- Comparar o que esta no portal com o que esta no banco (Financas e Impostos).\n- Listar todas as cartas ativas em um unico arquivo.\n\n**Criterios de Aceitacao**\n- Cada uma das 4 entregas tem arquivo final pronto em `extracao-carta/demandas/2026-06/`.\n",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 102,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "cartas extracao sefaz financas",
+      "ado_id": "",
+      "status": "Finalizado"
+    },
+    {
+      "csv_id": 150,
+      "tipo": "Product Backlog Item",
+      "titulo": "[X-VIA] Onboarding analista de negocio - 24-06-2026",
+      "descricao": "**Historia do usuario**\nComo analista da SETDIG, quero apresentar o GDI e como a SETDIG funciona para a analista de negocio nova da XVia, para que ela consiga comecar a atuar com contexto suficiente.\n\n**Requisitos**\n- Apresentar o que e o GDI e o papel da SETDIG.\n- Mostrar como o time se organiza e quem faz o que.\n- Tirar duvidas iniciais.\n\n**Criterios de Aceitacao**\n- Reuniao realizada; analista da XVia entendeu o panorama basico para comecar.\n",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 115,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "xvia onboarding gdi",
+      "ado_id": "",
+      "status": "Finalizado"
+    },
+    {
+      "csv_id": 151,
+      "tipo": "Product Backlog Item",
+      "titulo": "[X-VIA] Alinhamento com Brenda sobre documento - 24-06-2026",
+      "descricao": "**Historia do usuario**\nComo analista, quero alinhar com a Brenda da XVia os pontos de ajuste no documento em revisao, para fechar a proxima versao sem retrabalho.\n\n**Requisitos**\n- Listar pontos pendentes do documento.\n- Discutir cada ponto com a Brenda.\n- Definir quem ajusta o que e em qual prazo.\n\n**Criterios de Aceitacao**\n- Lista de ajustes acordada e registrada.\n",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 115,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "xvia brenda documento alinhamento",
+      "ado_id": "",
+      "status": "Finalizado"
+    },
+    {
+      "csv_id": 152,
+      "tipo": "Product Backlog Item",
+      "titulo": "[DS-MS] POC Storybook do Design System MS - 24-06-2026",
+      "descricao": "**Historia do usuario**\nComo time de Design System, quero apresentar a proposta de usar Storybook e ter uma POC funcionando, para mostrar que o caminho e viavel antes de escalar.\n\n**Requisitos**\n- Apresentar a proposta de usar Storybook como catalogo dos componentes.\n- Preparar o material da apresentacao.\n- Montar uma POC inicial com componentes basicos.\n\n**Criterios de Aceitacao**\n- Apresentacao feita; POC roda localmente mostrando ao menos um componente.\n",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "ds-ms storybook poc design-system",
+      "ado_id": "",
+      "status": "Finalizado"
+    },
+    {
+      "csv_id": 153,
+      "tipo": "Product Backlog Item",
+      "titulo": "[CENSO] Renomeacao do projeto e mapeamento SEAD - 24-06-2026",
+      "descricao": "**Historia do usuario**\nComo analista, quero renomear o projeto 'mapeamento-inicial-servicos-digitais' para 'Censo de Servicos Digitais' e fazer o mapeamento da SEAD, para padronizar o nome e comecar pela primeira secretaria.\n\n**Requisitos**\n- Renomear projeto/pasta para 'Censo de Servicos Digitais'.\n- Levantar servicos digitais da SEAD.\n- Registrar os servicos no formato do censo.\n\n**Criterios de Aceitacao**\n- Projeto renomeado; SEAD com mapa de servicos preenchido.\n",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "censo servicos-digitais sead mapeamento",
+      "ado_id": "",
+      "status": "Finalizado"
     }
   ],
-  "generated_at": "2026-06-24T08:56:24"
+  "generated_at": "2026-06-24T09:07:57"
 }
