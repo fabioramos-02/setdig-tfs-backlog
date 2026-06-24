@@ -984,7 +984,7 @@
       "csv_id": 170,
       "tipo": "Product Backlog Item",
       "titulo": "[X-VIA] Analise do Plano de Execucao PGD-MS - 24-06-2026",
-      "descricao": "**Historia do usuario**\nComo analista SETDIG, quero analisar o Plano de Execucao do PGD-MS e organizar o cronograma em planilha de controle colaborativa, para acompanhar os marcos junto com o time da XVia (Maycon) e SETDIG (Duda, Dani) sem perder rastreio.\n\n**Resumo**\nGerei o workbook de controle 04_Plano_PGD-MS_v1.xlsx (8 abas) a partir do docx do Plano e publiquei no Google Drive para tracking conjunto SETDIG+XVia.\n\n**Local**\nC:\\Users\\framos\\Documents\\SETDIG\\2026\\Projetos\\xvia\\04_Plano_PGD-MS_v1.xlsx (fonte: Z:\\10- Xvia\\02-Documentacao de Projeto\\04_Plano_PGD-MS_v1.docx)\n\n**URLs**\n- https://drive.google.com/file/d/1_N3vyiRt55P4R9vu6PE8-HiDGX-Tx9gc/view\n\n**Requisitos**\n- Ler e mapear cronograma do Plano PGD-MS v1 (5 pilares, 44 entregas, 18 meses).\n- Gerar workbook xlsx de controle com abas: Capa, Visao Geral, Cronograma (Gantt), Entregas, Governanca, Riscos, Mudancas & Transicao, Marcos & USTs.\n- Publicar a planilha no Google Drive e compartilhar com Duda, Maycon e Dani.\n- Validar marcos e prazos com o time.\n\n**Criterios de Aceitacao**\n- Cronograma mapeado em planilha estruturada (pilares, entregas, responsaveis, datas).\n- Gantt com barras coloridas por pilar e aba de controle (Status, % concluido, responsavel SETDIG).\n- Planilha compartilhada com acesso para SETDIG e XVia.\n- Time alinhado sobre marcos e proximos passos.",
+      "descricao": "**Historia do usuario**\nComo analista SETDIG, quero analisar o Plano de Execucao do PGD-MS e organizar o cronograma em planilha de controle colaborativa, para acompanhar os marcos junto com o time da XVia (Maycon) e SETDIG (Duda, Dani) sem perder rastreio.\n\n**Resumo**\nGerei o workbook de controle 04_Plano_PGD-MS_v1.xlsx (8 abas) a partir do docx do Plano e publiquei no Google Drive para tracking conjunto SETDIG+XVia.\n\n**Local**\nC:\\Users\\framos\\Documents\\SETDIG\\2026\\Projetos\\xvia\\04_Plano_PGD-MS_v1.xlsx (fonte: Z:\\10- Xvia\\02-Documentacao de Projeto\\04_Plano_PGD-MS_v1.docx)\n\n**URLs**\n- https://docs.google.com/spreadsheets/d/1lZpEt7N_co1IrwFFVKlNO6UjTpPfXr8HCZKj1VriIEI/edit\n\n**Requisitos**\n- Ler e mapear cronograma do Plano PGD-MS v1 (5 pilares, 44 entregas, 18 meses).\n- Gerar workbook xlsx de controle com abas: Capa, Visao Geral, Cronograma (Gantt), Entregas, Governanca, Riscos, Mudancas & Transicao, Marcos & USTs.\n- Publicar a planilha no Google Drive e compartilhar com Duda, Maycon e Dani.\n- Validar marcos e prazos com o time.\n\n**Criterios de Aceitacao**\n- Cronograma mapeado em planilha estruturada (pilares, entregas, responsaveis, datas).\n- Gantt com barras coloridas por pilar e aba de controle (Status, % concluido, responsavel SETDIG).\n- Planilha compartilhada com acesso para SETDIG e XVia.\n- Time alinhado sobre marcos e proximos passos.",
       "projeto_ado": "SETDIG",
       "csv_id_pai": 115,
       "prioridade": 2,
@@ -1026,7 +1026,7 @@
       "csv_id": 173,
       "tipo": "Task",
       "titulo": "Criar planilha Google Sheets para tracking conjunto SETDIG+XVia",
-      "descricao": "Montar workbook de controle (xlsx) que sirva de painel comum SETDIG+XVia, publicado no Google Drive.\n\nSubatividades:\n- Gerar 04_Plano_PGD-MS_v1.xlsx com 8 abas via openpyxl.\n- Aba Cronograma com Gantt de barras coloridas por pilar (18 meses).\n- Aba Entregas com colunas de controle: ID, Pilar, Status (lista), % concluido, Responsavel SETDIG, Data real, Observacoes.\n- Abas Governanca, Riscos (severidade calculada) e Marcos & USTs (checklist + controle de USTs).\n- Publicar no Drive: https://drive.google.com/file/d/1_N3vyiRt55P4R9vu6PE8-HiDGX-Tx9gc/view",
+      "descricao": "Montar workbook de controle (xlsx) que sirva de painel comum SETDIG+XVia, publicado no Google Drive.\n\nSubatividades:\n- Gerar 04_Plano_PGD-MS_v1.xlsx com 8 abas via openpyxl.\n- Aba Cronograma com Gantt de barras coloridas por pilar (18 meses).\n- Aba Entregas com colunas de controle: ID, Pilar, Status (lista), % concluido, Responsavel SETDIG, Data real, Observacoes.\n- Abas Governanca, Riscos (severidade calculada) e Marcos & USTs (checklist + controle de USTs).\n- Publicar no Drive: https://docs.google.com/spreadsheets/d/1lZpEt7N_co1IrwFFVKlNO6UjTpPfXr8HCZKj1VriIEI/edit",
       "projeto_ado": "SETDIG",
       "csv_id_pai": 170,
       "prioridade": 2,
@@ -1040,7 +1040,7 @@
       "csv_id": 174,
       "tipo": "Task",
       "titulo": "Compartilhar planilha com Duda, Maycon e Dani",
-      "descricao": "Dar acesso de edicao a todos os envolvidos na planilha publicada no Drive.\n\nSubatividades:\n- Compartilhar com Duda (SETDIG).\n- Compartilhar com Maycon (XVia).\n- Compartilhar com Dani (SETDIG).\n- Enviar link no canal do projeto: https://drive.google.com/file/d/1_N3vyiRt55P4R9vu6PE8-HiDGX-Tx9gc/view",
+      "descricao": "Dar acesso de edicao a todos os envolvidos na planilha publicada no Drive.\n\nSubatividades:\n- Compartilhar com Duda (SETDIG).\n- Compartilhar com Maycon (XVia).\n- Compartilhar com Dani (SETDIG).\n- Enviar link no canal do projeto: https://docs.google.com/spreadsheets/d/1lZpEt7N_co1IrwFFVKlNO6UjTpPfXr8HCZKj1VriIEI/edit",
       "projeto_ado": "SETDIG",
       "csv_id_pai": 170,
       "prioridade": 2,
@@ -1107,5 +1107,5 @@
       "status": "A fazer"
     }
   ],
-  "generated_at": "2026-06-24T14:05:58"
+  "generated_at": "2026-06-24T14:12:45"
 }
