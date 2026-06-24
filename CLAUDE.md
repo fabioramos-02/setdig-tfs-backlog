@@ -28,12 +28,18 @@ Como <papel>, quero <ação>, para <benefício>.
 **Local**
 <path absoluto do repo/pasta de trabalho — ex.: C:\...\Projetos\xvia. Use "—" se reunião sem repo.>
 
+**URLs**           ← opcional (omitir se não houver)
+- https://app.vercel.app
+- https://fabioramos-02.github.io/projeto/
+
 **Requisitos**
 - ...
 
 **Critérios de Aceitação**
 - ...
 ```
+
+Bloco **URLs** é opcional. Skill `/tfs` **sempre pergunta** ao criar PBI/Task ("Tem URLs de publicação?"). Quando presentes, viram links clicáveis no relatório semanal.
 
 Resumo e Local são consumidos pelo `/tfs semana` para alimentar o relatório.
 

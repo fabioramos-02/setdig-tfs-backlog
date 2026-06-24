@@ -201,6 +201,26 @@ RELATORIOS_TEMPLATE = """<!DOCTYPE html>
   .relatorio p {{ margin: 8px 0; color: var(--color-neutral-500); font-size: 13px; }}
   .relatorio ul {{ padding-left: 20px; margin: 8px 0; }}
   .relatorio li {{ margin-bottom: 12px; line-height: 1.6; }}
+  .relatorio li ul {{ margin: 4px 0 0; padding-left: 18px; }}
+  .relatorio li li {{
+    margin-bottom: 2px;
+    font-size: 12.5px;
+    color: var(--color-neutral-500);
+    list-style: none;
+    position: relative;
+  }}
+  .relatorio li li::before {{
+    content: "\\1F517";
+    margin-right: 6px;
+    font-size: 11px;
+    opacity: 0.7;
+  }}
+  .relatorio li li a {{
+    color: var(--color-info-500);
+    text-decoration: none;
+    word-break: break-all;
+  }}
+  .relatorio li li a:hover {{ text-decoration: underline; }}
   .relatorio strong {{ color: var(--color-neutral-800); }}
   .relatorio code {{
     background: var(--color-neutral-100);

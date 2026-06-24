@@ -732,7 +732,7 @@
       "csv_id": 152,
       "tipo": "Product Backlog Item",
       "titulo": "[DS-MS] POC Storybook do Design System MS - 24-06-2026",
-      "descricao": "**Historia do usuario**\nComo time de Design System, quero apresentar a proposta de usar Storybook e ter uma POC funcionando, para mostrar que o caminho e viavel antes de escalar.\n\n**Resumo**\nApresentei Storybook e POC rodando.\n\n**Local**\nC:\\Users\\framos\\Documents\\SETDIG\\2026\\Projetos\\DS-MS-Design-System\\poc\n**Requisitos**\n- Apresentar a proposta de usar Storybook como catalogo dos componentes.\n- Preparar o material da apresentacao.\n- Montar uma POC inicial com componentes basicos.\n\n**Criterios de Aceitacao**\n- Apresentacao feita; POC roda localmente mostrando ao menos um componente.\n",
+      "descricao": "**Historia do usuario**\nComo time de Design System, quero apresentar a proposta de usar Storybook e ter uma POC funcionando, para mostrar que o caminho e viavel antes de escalar.\n\n**Resumo**\nApresentei Storybook e POC rodando.\n\n**Local**\nC:\\Users\\framos\\Documents\\SETDIG\\2026\\Projetos\\DS-MS-Design-System\\poc\n\n**URLs**\n- https://fabioramos-02.github.io/DS-MS-Design-System/\n**Requisitos**\n- Apresentar a proposta de usar Storybook como catalogo dos componentes.\n- Preparar o material da apresentacao.\n- Montar uma POC inicial com componentes basicos.\n\n**Criterios de Aceitacao**\n- Apresentacao feita; POC roda localmente mostrando ao menos um componente.\n",
       "projeto_ado": "SETDIG",
       "csv_id_pai": 101,
       "prioridade": 2,
@@ -746,7 +746,7 @@
       "csv_id": 153,
       "tipo": "Product Backlog Item",
       "titulo": "[CENSO] Renomeacao do projeto e mapeamento SEAD - 24-06-2026",
-      "descricao": "**Historia do usuario**\nComo analista, quero renomear o projeto 'mapeamento-inicial-servicos-digitais' para 'Censo de Servicos Digitais' e fazer o mapeamento da SEAD, para padronizar o nome e comecar pela primeira secretaria.\n\n**Resumo**\nRenomeei projeto e iniciei mapeamento SEAD.\n\n**Local**\nC:\\Users\\framos\\Documents\\SETDIG\\2026\\Projetos\\mapeamento-inicial-servicos-digitais\n**Requisitos**\n- Renomear projeto/pasta para 'Censo de Servicos Digitais'.\n- Levantar servicos digitais da SEAD.\n- Registrar os servicos no formato do censo.\n\n**Criterios de Aceitacao**\n- Projeto renomeado; SEAD com mapa de servicos preenchido.\n",
+      "descricao": "**Historia do usuario**\nComo analista, quero renomear o projeto 'mapeamento-inicial-servicos-digitais' para 'Censo de Servicos Digitais' e fazer o mapeamento da SEAD, para padronizar o nome e comecar pela primeira secretaria.\n\n**Resumo**\nRenomeei projeto e iniciei mapeamento SEAD.\n\n**Local**\nC:\\Users\\framos\\Documents\\SETDIG\\2026\\Projetos\\mapeamento-inicial-servicos-digitais\n\n**URLs**\n- https://mapeamento-inicial-servicos-digitai.vercel.app/\n- https://mapeamento-inicial-servicos-digitai.vercel.app/sead/\n**Requisitos**\n- Renomear projeto/pasta para 'Censo de Servicos Digitais'.\n- Levantar servicos digitais da SEAD.\n- Registrar os servicos no formato do censo.\n\n**Criterios de Aceitacao**\n- Projeto renomeado; SEAD com mapa de servicos preenchido.\n",
       "projeto_ado": "SETDIG",
       "csv_id_pai": 101,
       "prioridade": 2,
@@ -981,5 +981,5 @@
       "status": "Finalizado"
     }
   ],
-  "generated_at": "2026-06-24T09:42:51"
+  "generated_at": "2026-06-24T10:17:39"
 }
