@@ -186,7 +186,7 @@ function renderNode(node, depth) {
   row.dataset.id = node.csv_id;
 
   const toggle = document.createElement("span");
-  toggle.className = "toggle" + (node.children.length ? "" : " leaf");
+  toggle.className = "node-toggle" + (node.children.length ? "" : " leaf");
   toggle.innerHTML = '<svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><polygon points="2,4 10,4 6,9" fill="#545d64"/></svg>';
 
   const icon = wiIcon(node.tipo, 16);

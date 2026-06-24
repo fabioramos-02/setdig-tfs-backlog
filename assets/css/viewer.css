@@ -180,7 +180,7 @@ header {
 .wi-icon svg { width: 10px; height: 10px; }
 
 /* toggle chevron */
-.toggle {
+.node-toggle {
   width: 18px; height: 18px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
@@ -192,13 +192,13 @@ header {
   cursor: pointer;
   padding: 0;
 }
-.toggle svg { display: block; }
-.toggle svg polygon { fill: var(--color-neutral-600); }
-.toggle:hover { background: var(--border); }
-.toggle:hover svg polygon { fill: var(--color-neutral-800); }
-.toggle.open { transform: rotate(180deg); }
-.toggle.leaf { opacity: 0; pointer-events: none; }
-.node-row.selected .toggle svg polygon { fill: var(--color-primary-500); }
+.node-toggle svg { display: block; }
+.node-toggle svg polygon { fill: var(--color-neutral-600); }
+.node-toggle:hover { background: var(--border); }
+.node-toggle:hover svg polygon { fill: var(--color-neutral-800); }
+.node-toggle.open { transform: rotate(180deg); }
+.node-toggle.leaf { opacity: 0; pointer-events: none; }
+.node-row.selected .node-toggle svg polygon { fill: var(--color-primary-500); }
 
 .title-text {
   flex: 1;
