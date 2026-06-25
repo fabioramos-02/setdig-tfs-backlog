@@ -1224,7 +1224,21 @@
       "titulo": "Publicar Storybook completo do DS-MS no GitLab institucional",
       "descricao": "Versionar no GitLab institucional (gitlabs.ms.gov.br) todo o Storybook do DS-MS criado no ambiente local, consolidando o catalogo de componentes em repositorio oficial da org.\n\nSubatividades:\n- Subir o projeto Storybook local para o GitLab institucional.\n- Validar o repositorio remoto com o catalogo de componentes.\n\nLocal: C:\\Users\\framos\\Documents\\SETDIG\\2026\\Projetos\\storybook\n\n**URLs**\n- https://gitlabs.ms.gov.br/ucqi/storybook-designsystem",
       "projeto_ado": "SETDIG",
-      "csv_id_pai": 152,
+      "csv_id_pai": 188,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "ado_id": "",
+      "status": "Finalizado"
+    },
+    {
+      "csv_id": 188,
+      "tipo": "Product Backlog Item",
+      "titulo": "[DS-MS] Publicacao do Storybook no GitLab institucional - 25-06-2026",
+      "descricao": "**Historia do usuario**\nComo time de Design System, quero o Storybook completo versionado no GitLab institucional, para ter um catalogo oficial dos componentes acessivel ao time.\n\n**Resumo**\nPubliquei todo o Storybook do DS-MS no GitLab institucional (gitlabs.ms.gov.br).\n\n**Local**\nC:\\Users\\framos\\Documents\\SETDIG\\2026\\Projetos\\storybook\n\n**URLs**\n- https://gitlabs.ms.gov.br/ucqi/storybook-designsystem\n\n**Requisitos**\n- Subir o projeto Storybook local completo para o GitLab institucional.\n- Validar o repositorio remoto com o catalogo de componentes.\n\n**Criterios de Aceitacao**\n- Repositorio acessivel no GitLab institucional com o Storybook versionado e renderizando os componentes.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
       "prioridade": 2,
       "sprint": "",
       "estimativa_horas": "",
@@ -1233,5 +1247,5 @@
       "status": "Finalizado"
     }
   ],
-  "generated_at": "2026-06-25T10:42:49"
+  "generated_at": "2026-06-25T11:06:28"
 }

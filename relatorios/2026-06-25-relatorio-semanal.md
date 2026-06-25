@@ -1,6 +1,6 @@
 # Relatório semanal — 18/06 a 25/06
 
-_Gerado em 2026-06-25 às 10:42 (últimos 7 dias)._
+_Gerado em 2026-06-25 às 11:06 (últimos 7 dias)._
 
 ## [CARTAS]
 - **Extracoes de demandas SEFAZ/Financas** (24-06) — Finalizado — Entreguei 4 extracoes para SEFAZ e Financas. _Local: `C:\Users\framos\Documents\SETDIG\2026\Projetos\extracao-carta`_
@@ -10,6 +10,8 @@ _Gerado em 2026-06-25 às 10:42 (últimos 7 dias)._
   - URLs: [https://mapeamento-inicial-servicos-digitai.vercel.app/](https://mapeamento-inicial-servicos-digitai.vercel.app/) · [https://mapeamento-inicial-servicos-digitai.vercel.app/sead/](https://mapeamento-inicial-servicos-digitai.vercel.app/sead/)
 
 ## [DS-MS]
+- **Publicacao do Storybook no GitLab institucional** (25-06) — Finalizado — Publiquei todo o Storybook do DS-MS no GitLab institucional (gitlabs.ms.gov.br). _Local: `C:\Users\framos\Documents\SETDIG\2026\Projetos\storybook`_
+  - URLs: [https://gitlabs.ms.gov.br/ucqi/storybook-designsystem](https://gitlabs.ms.gov.br/ucqi/storybook-designsystem)
 - **POC Storybook do Design System MS** (24-06) — Finalizado — Apresentei Storybook e POC rodando. _Local: `C:\Users\framos\Documents\SETDIG\2026\Projetos\DS-MS-Design-System\poc`_
   - URLs: [https://fabioramos-02.github.io/DS-MS-Design-System/](https://fabioramos-02.github.io/DS-MS-Design-System/)
 
