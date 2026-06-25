@@ -1245,7 +1245,21 @@
       "tags": "",
       "ado_id": "",
       "status": "Finalizado"
+    },
+    {
+      "csv_id": 189,
+      "tipo": "Task",
+      "titulo": "Levantamento e mapeamento de servicos nativos vs consultas nas APIs do MS Digital",
+      "descricao": "Levantar e mapear os servicos expostos pelas APIs do MS Digital, classificando cada um como consulta pura ou servico com regra de negocio nativa, para embasar a estrategia de migracao.\n\nSubatividades:\n- Listar todos os endpoints/servicos disponíveis nas APIs do MS Digital\n- Classificar cada servico: consulta pura vs. possui regra de negocio\n- Identificar servicos nativos (logica propria) vs. apenas passagem de dados\n- Documentar resultado em planilha/tabela para revisao com equipe",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 179,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "ado_id": "",
+      "status": "Em progresso"
     }
   ],
-  "generated_at": "2026-06-25T11:07:23"
+  "generated_at": "2026-06-25T13:38:40"
 }
