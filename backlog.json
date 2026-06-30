@@ -1371,7 +1371,49 @@
       "tags": "cartas-servico;auditoria;logo-politica",
       "ado_id": "",
       "status": "A fazer"
+    },
+    {
+      "csv_id": 198,
+      "tipo": "Product Backlog Item",
+      "titulo": "[PROSAS] Remoção de logos institucionais (rodapé e cabeçalho) - 30-06-2026",
+      "descricao": "**História do usuário**\nComo SETDIG, quero que a Prosas substitua as logos institucionais do cabeçalho e rodapé do site editaisms.prosas.com.br e remova os links de redes sociais, para adequar a comunicação institucional ao período das Eleições Gerais de 2026.\n\n**Resumo**\nFormalização da demanda à Prosas (via Adriana/Isabela) para substituir as logomarcas de cabeçalho e rodapé do site editaisms.prosas.com.br e remover os links de redes sociais, em conformidade com as normas do período eleitoral 2026. Implementação até 04/07/2026, vigente até o término das Eleições Gerais de 2026.\n\n**Local**\n—\n\n**URLs**\n- https://editaisms.prosas.com.br/\n- Cabeçalho: https://noticias.ms.gov.br/uploads/midias/590ffea84a7e4bc0965ff57f6d8efa4d.svg\n- Rodapé: https://noticias.ms.gov.br/uploads/midias/e0e36ee104ac49ecad8a3fe5412288e4.svg\n\n**Requisitos**\n- Substituir a logomarca do cabeçalho pela versão informada.\n- Substituir a logomarca do rodapé pela versão informada.\n- Remover os links de acesso às redes sociais do site.\n- Implementar até 04/07/2026; manter vigente até o término das Eleições Gerais de 2026.\n\n**Critérios de Aceitação**\n- Demanda formalizada com a Adriana.\n- Logos (cabeçalho e rodapé) encaminhadas à equipe Prosas.\n- Solicitação enviada dentro do prazo (04/07/2026).",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "prosas;eleitoral;identidade-visual;editais",
+      "ado_id": "",
+      "status": "Finalizado"
+    },
+    {
+      "csv_id": 199,
+      "tipo": "Task",
+      "titulo": "Formalizar demanda com a Adriana",
+      "descricao": "Formalizar com a Adriana a demanda de atualização da identidade visual do site editaisms.prosas.com.br para o período eleitoral 2026 (substituição de logos de cabeçalho/rodapé e remoção de redes sociais).",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 198,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "prosas;formalizacao",
+      "ado_id": "",
+      "status": "Finalizado"
+    },
+    {
+      "csv_id": 200,
+      "tipo": "Task",
+      "titulo": "Encaminhar logos",
+      "descricao": "Encaminhar à equipe Prosas (Isabela) as logomarcas para substituição:\n- Cabeçalho: https://noticias.ms.gov.br/uploads/midias/590ffea84a7e4bc0965ff57f6d8efa4d.svg\n- Rodapé: https://noticias.ms.gov.br/uploads/midias/e0e36ee104ac49ecad8a3fe5412288e4.svg",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 198,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "prosas;logos",
+      "ado_id": "",
+      "status": "Finalizado"
     }
   ],
-  "generated_at": "2026-06-30T10:32:54"
+  "generated_at": "2026-06-30T13:47:58"
 }
