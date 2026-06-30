@@ -165,6 +165,63 @@ function applyFilter() {
       n.toggleEl.classList.add("open");
     }
   });
+  if (weekMode) renderWeekList();
+}
+
+// ── Filtro "Esta semana" (PBIs da semana corrente, Seg–Dom, lista plana) ──────
+let weekMode = false;
+const now = new Date();
+const dow = (now.getDay() + 6) % 7;                 // 0 = segunda
+const weekStart = new Date(now); weekStart.setHours(0, 0, 0, 0); weekStart.setDate(now.getDate() - dow);
+const weekEnd = new Date(weekStart); weekEnd.setDate(weekStart.getDate() + 6); weekEnd.setHours(23, 59, 59, 999);
+function inWeek(it) {
+  if (!it.data) return false;
+  const d = new Date(it.data + "T00:00:00");
+  return d >= weekStart && d <= weekEnd;
+}
+
+function renderWeekList() {
+  const box = document.getElementById("week-list");
+  box.innerHTML = "";
+  const pbis = DATA.items
+    .filter(it => it.tipo === "Product Backlog Item" && inWeek(it))
+    .filter(it => filter === "Todos" || effStatus(map[it.csv_id]) === filter)
+    .sort((a, b) => (a.data < b.data ? 1 : -1));   // mais recente primeiro
+  if (!pbis.length) {
+    box.innerHTML = '<div class="week-empty">Nenhum PBI nesta semana' +
+      (filter !== "Todos" ? ` (${filter})` : "") + ".</div>";
+    return;
+  }
+  pbis.forEach(it => {
+    const n = map[it.csv_id];
+    const row = document.createElement("div");
+    row.className = "week-row";
+    row.appendChild(wiIcon("Product Backlog Item", 16));
+    const txt = document.createElement("div");
+    txt.className = "week-text";
+    const t = document.createElement("div");
+    t.className = "week-title";
+    t.textContent = it.titulo;
+    txt.appendChild(t);
+    const parent = it.csv_id_pai && map[it.csv_id_pai];
+    if (parent) {
+      const p = document.createElement("div");
+      p.className = "parent-label";
+      p.textContent = parent.titulo;
+      txt.appendChild(p);
+    }
+    row.appendChild(txt);
+    const dot = document.createElement("span");
+    dot.className = "st-dot";
+    dot.style.background = ST_VAR[effStatus(n)];
+    row.appendChild(dot);
+    row.addEventListener("click", () => {
+      box.querySelectorAll(".week-row.selected").forEach(r => r.classList.remove("selected"));
+      row.classList.add("selected");
+      renderDetail(n);
+    });
+    box.appendChild(row);
+  });
 }
 
 function wiIcon(tipo, size = 16) {
@@ -381,12 +438,25 @@ const fb = document.getElementById("filterbar");
   b.appendChild(document.createTextNode(f));
   b.addEventListener("click", () => {
     filter = f;
-    fb.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+    fb.querySelectorAll(".chip:not(.week-chip)").forEach(c => c.classList.remove("active"));
     b.classList.add("active");
     applyFilter();
   });
   fb.appendChild(b);
 });
+
+// toggle "Esta semana" — eixo ortogonal aos chips de status
+const weekBtn = document.createElement("button");
+weekBtn.className = "chip week-chip";
+weekBtn.innerHTML = '<span class="week-ico">📅</span>Esta semana';
+weekBtn.addEventListener("click", () => {
+  weekMode = !weekMode;
+  weekBtn.classList.toggle("active", weekMode);
+  document.getElementById("tree").hidden = weekMode;
+  document.getElementById("week-list").hidden = !weekMode;
+  if (weekMode) renderWeekList();
+});
+fb.appendChild(weekBtn);
 
 Object.values(map).forEach(refreshNode);
 updateHeader();

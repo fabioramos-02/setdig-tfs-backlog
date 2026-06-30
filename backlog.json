@@ -11,6 +11,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "epic,governanca,programa",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -25,6 +26,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "feature,levantamento,analytics",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -39,6 +41,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "feature,cartas-servico,higienizacao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -53,6 +56,7 @@
       "sprint": "Sprint 1",
       "estimativa_horas": null,
       "tags": "dashboard,matomo,ga4,portal-unico",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -67,6 +71,7 @@
       "sprint": "Sprint 1",
       "estimativa_horas": 9,
       "tags": "matomo,top-paginas",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -81,6 +86,7 @@
       "sprint": "Sprint 1",
       "estimativa_horas": 3,
       "tags": "matomo,busca",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -95,6 +101,7 @@
       "sprint": "Sprint 2",
       "estimativa_horas": 11,
       "tags": "matomo,transitions,jornada",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -109,6 +116,7 @@
       "sprint": "Sprint 1",
       "estimativa_horas": 10,
       "tags": "ga4,ms-digital",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -123,6 +131,7 @@
       "sprint": "Sprint 2",
       "estimativa_horas": 6,
       "tags": "cartas,ranking,regex",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -137,6 +146,7 @@
       "sprint": "Sprint 3",
       "estimativa_horas": null,
       "tags": "cge,cruzamento,similaridade",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -151,6 +161,7 @@
       "sprint": "Sprint 3",
       "estimativa_horas": 4,
       "tags": "dba,probe-schema",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -165,6 +176,7 @@
       "sprint": "Sprint 3",
       "estimativa_horas": 16,
       "tags": "snapshot,extracao,postgres",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -179,6 +191,7 @@
       "sprint": "Sprint 3",
       "estimativa_horas": 10,
       "tags": "similaridade,clusters",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -193,6 +206,7 @@
       "sprint": "Sprint 4",
       "estimativa_horas": 4,
       "tags": "qualidade,modelo",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -207,6 +221,7 @@
       "sprint": "Sprint 4",
       "estimativa_horas": 12,
       "tags": "relatorio,html,kpi,treemap",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -221,6 +236,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-eds",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -235,6 +251,7 @@
       "sprint": "",
       "estimativa_horas": 8,
       "tags": "xvia formflow documentacao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -249,6 +266,7 @@
       "sprint": "",
       "estimativa_horas": 6,
       "tags": "xvia formflow",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -263,6 +281,7 @@
       "sprint": "",
       "estimativa_horas": 3,
       "tags": "xvia formflow gaps",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -277,6 +296,7 @@
       "sprint": "",
       "estimativa_horas": 12,
       "tags": "xvia handoff validacao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -291,6 +311,7 @@
       "sprint": "",
       "estimativa_horas": 4,
       "tags": "xvia gaps auditoria",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -305,6 +326,7 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "xvia handoff reuniao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -319,6 +341,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "abep iospd pesquisa",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -333,6 +356,7 @@
       "sprint": "",
       "estimativa_horas": 16,
       "tags": "abep iospd convalidacao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -347,6 +371,7 @@
       "sprint": "",
       "estimativa_horas": 4,
       "tags": "abep dimensao-1.1 evidencias",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -361,6 +386,7 @@
       "sprint": "",
       "estimativa_horas": 6,
       "tags": "abep convalidacao gaps",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -375,6 +401,7 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "abep submissao relatorio",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -389,6 +416,7 @@
       "sprint": "",
       "estimativa_horas": 6,
       "tags": "bench-carta filtro-perfil analytics",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -403,6 +431,7 @@
       "sprint": "",
       "estimativa_horas": 3,
       "tags": "bench-carta apresentacao gestao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -417,6 +446,7 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "bench-carta event-tracking matomo",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -431,6 +461,7 @@
       "sprint": "",
       "estimativa_horas": 5,
       "tags": "prototipo categorias portal-ms",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -445,6 +476,7 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "prototipo validacao apresentacao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -459,6 +491,7 @@
       "sprint": "",
       "estimativa_horas": 2,
       "tags": "prototipo feedback decisao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -473,6 +506,7 @@
       "sprint": "",
       "estimativa_horas": 4,
       "tags": "ds-ms design-system",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -487,6 +521,7 @@
       "sprint": "",
       "estimativa_horas": 3,
       "tags": "ds-ms obsidian catalogo",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -501,6 +536,7 @@
       "sprint": "",
       "estimativa_horas": 16,
       "tags": "xvia orgaos-institucionais sqlite obsidian",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -515,6 +551,7 @@
       "sprint": "",
       "estimativa_horas": 6,
       "tags": "relatorio-cge erros portal-unico cge",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -529,6 +566,7 @@
       "sprint": "",
       "estimativa_horas": 8,
       "tags": "tooling tfs backlog skill claude-code",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -543,6 +581,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas-servico",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -557,6 +596,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "governanca;eleitoral",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -571,6 +611,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas-servico;prototipo",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -585,6 +626,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "abep;comite;linguagem-simples",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -599,6 +641,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "mad;acessibilidade;seo;linguagem-simples;comite",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -613,6 +656,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "governanca,gcs,xvia,documentacao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -627,6 +671,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -641,6 +686,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -655,6 +701,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -669,6 +716,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -683,6 +731,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -697,6 +746,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas extracao sefaz financas",
+      "data": "2026-06-24",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -711,6 +761,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia onboarding gdi",
+      "data": "2026-06-24",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -725,6 +776,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia brenda documento alinhamento",
+      "data": "2026-06-24",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -739,6 +791,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "ds-ms storybook poc design-system",
+      "data": "2026-06-24",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -753,6 +806,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "censo servicos-digitais sead mapeamento",
+      "data": "2026-06-24",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -767,6 +821,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas sefaz categorias",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -781,6 +836,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas financas ausentes",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -795,6 +851,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas portal banco diff",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -809,6 +866,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas ativas consolidado",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -823,6 +881,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia onboarding gdi",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -837,6 +896,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia onboarding time",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -851,6 +911,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia onboarding duvidas",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -865,6 +926,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia brenda documento pendencias",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -879,6 +941,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia brenda reuniao",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -893,6 +956,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia brenda responsaveis prazos",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -907,6 +971,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "ds-ms storybook proposta",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -921,6 +986,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "ds-ms apresentacao material",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -935,6 +1001,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "ds-ms storybook poc implementacao",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -949,6 +1016,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "censo renomear projeto",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -963,6 +1031,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "censo sead levantamento",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -977,6 +1046,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "censo sead registro",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -991,6 +1061,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia pgd-ms plano-execucao planilha",
+      "data": "2026-06-24",
       "ado_id": "",
       "status": "Em progresso"
     },
@@ -1005,6 +1076,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia maycon reuniao alinhamento",
+      "data": "2026-06-24",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1019,6 +1091,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia pgd-ms",
+      "data": "",
       "ado_id": "",
       "status": "Em progresso"
     },
@@ -1033,6 +1106,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia pgd-ms",
+      "data": "",
       "ado_id": "",
       "status": "Em progresso"
     },
@@ -1047,6 +1121,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia pgd-ms",
+      "data": "",
       "ado_id": "",
       "status": "Em progresso"
     },
@@ -1061,6 +1136,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia pgd-ms",
+      "data": "",
       "ado_id": "",
       "status": "Em progresso"
     },
@@ -1075,6 +1151,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia pgd-ms",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1089,6 +1166,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia pgd-ms",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1103,6 +1181,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia pgd-ms",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1117,6 +1196,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-apis swagger ms-digital",
+      "data": "2026-06-24",
       "ado_id": "",
       "status": "Em progresso"
     },
@@ -1131,6 +1211,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-apis swagger",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1145,6 +1226,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-apis inventario",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1159,6 +1241,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-apis estrategia",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -1173,6 +1256,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-apis pauta reuniao",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -1187,6 +1271,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-apis priorizacao bi",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1201,6 +1286,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-apis html design-system-ms",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1215,6 +1301,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "xvia migracao-apis git github",
+      "data": "",
       "ado_id": "",
       "status": "Em progresso"
     },
@@ -1229,6 +1316,7 @@
       "sprint": "",
       "estimativa_horas": "",
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -1243,6 +1331,7 @@
       "sprint": "",
       "estimativa_horas": "",
       "tags": "",
+      "data": "2026-06-25",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -1257,6 +1346,7 @@
       "sprint": "",
       "estimativa_horas": "",
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "Em progresso"
     },
@@ -1271,6 +1361,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "responde-ms;formularios;governanca",
+      "data": "2026-06-30",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1285,6 +1376,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "responde-ms;alinhamento",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1299,6 +1391,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "responde-ms;documentacao",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1313,6 +1406,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "responde-ms;sgd",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1327,6 +1421,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas-servico;pdf;bi;auditoria;eleitoral",
+      "data": "2026-06-30",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1341,6 +1436,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas-servico;extracao;postgres",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1355,6 +1451,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas-servico;bi",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1369,6 +1466,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "cartas-servico;auditoria;logo-politica",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1383,6 +1481,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "prosas;eleitoral;identidade-visual;editais",
+      "data": "2026-06-30",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -1397,6 +1496,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "prosas;formalizacao",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -1411,6 +1511,7 @@
       "sprint": "",
       "estimativa_horas": null,
       "tags": "prosas;logos",
+      "data": "",
       "ado_id": "",
       "status": "Finalizado"
     },
@@ -1425,6 +1526,7 @@
       "sprint": "",
       "estimativa_horas": "",
       "tags": "",
+      "data": "2026-06-30",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1439,6 +1541,7 @@
       "sprint": "",
       "estimativa_horas": "",
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1453,6 +1556,7 @@
       "sprint": "",
       "estimativa_horas": "",
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1467,6 +1571,7 @@
       "sprint": "",
       "estimativa_horas": "",
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     },
@@ -1481,9 +1586,10 @@
       "sprint": "",
       "estimativa_horas": "",
       "tags": "",
+      "data": "",
       "ado_id": "",
       "status": "A fazer"
     }
   ],
-  "generated_at": "2026-06-30T16:09:12"
+  "generated_at": "2026-06-30T16:24:12"
 }

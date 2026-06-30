@@ -415,6 +415,36 @@ header {
 .chip:hover { border-color: var(--color-primary-500); color: var(--color-primary-500); }
 .chip.active { background: var(--text); border-color: var(--text); color: #fff; }
 
+/* toggle "Esta semana" (eixo independente do status) */
+.week-chip { margin-left: auto; }
+.week-chip .week-ico { font-size: 12px; line-height: 1; }
+.week-chip:hover { border-color: var(--brand); color: var(--brand); }
+.week-chip.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+
+/* lista plana de PBIs da semana */
+#week-list { padding: 6px 0; }
+.week-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  border-bottom: 1px solid var(--border);
+}
+.week-row:hover { background: var(--hover); }
+.week-row.selected { background: var(--selected); border-left-color: var(--sel-bar); }
+.week-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; flex: 1; }
+.week-title {
+  font-size: 12px; font-weight: 600; color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.week-row .parent-label {
+  font-size: 10px; color: var(--text-sub);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.week-empty { padding: 24px 16px; color: var(--text-sub); font-size: 12px; }
+
 /* header stats + progress */
 .hdr-stat {
   display: inline-flex;

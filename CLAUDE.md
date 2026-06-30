@@ -58,6 +58,14 @@ Layout do `assets/`:
 
 `index.html` é shell (~57 linhas) — sem `<style>` ou `<script>` inline. Tudo via `<link>` e `<script src>`. Funciona em `file://` (duplo-clique local) e no GitHub Pages.
 
+## Campo `data` e filtro "Esta semana"
+
+Cada item tem `data` (ISO `YYYY-MM-DD`, default `""`). Para PBIs, derivado do
+`- DD-MM-YYYY` do título. Alimenta o toggle **📅 Esta semana** no viewer: quando ativo,
+esconde a árvore e mostra uma **lista plana só de PBIs** cuja `data` cai na semana corrente
+(Seg–Dom, calculada no client em `viewer.js` — `weekStart/weekEnd`). Combina com o filtro
+de status (AND). Itens sem `data` ficam fora do filtro. `/tfs` preenche `data` ao criar PBI.
+
 ## Status (`status` no JSON)
 
 Valores: `A fazer` | `Em progresso` | `Finalizado` | `Impedido`.
