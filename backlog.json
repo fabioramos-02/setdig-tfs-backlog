@@ -1413,7 +1413,77 @@
       "tags": "prosas;logos",
       "ado_id": "",
       "status": "Finalizado"
+    },
+    {
+      "csv_id": 201,
+      "tipo": "Product Backlog Item",
+      "titulo": "[LOGO-PERIODO-ELEITORAL] Alteração da logo do Portal (EDS) — hom e prod",
+      "descricao": "**História do usuário**\nComo SETDIG, quero formalizar e executar a alteração da logo do Portal junto à EDS durante o período eleitoral, para garantir conformidade com a legislação eleitoral.\n\n**Requisitos**\n- Demanda formalizada com a EDS\n- Alteração validada em homologação antes de produção\n- Documentação especificando a alteração da logo\n\n**Critérios de Aceitação**\n- Logo ajustada em homologação e produção\n- Documentação publicada\n- Conformidade eleitoral atestada",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 202,
+      "tipo": "Task",
+      "titulo": "Formalizar demanda de alteração da logo com a EDS",
+      "descricao": "Formalizar com a EDS o pedido de alteração da logo (ofício/e-mail), especificando ativo, ambientes e prazo eleitoral.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 201,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 203,
+      "tipo": "Task",
+      "titulo": "Testar alteração da logo em homologação",
+      "descricao": "Validar em homologação a logo alterada pela EDS (visual, posicionamento, cabeçalho/rodapé).",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 201,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 204,
+      "tipo": "Task",
+      "titulo": "Criar documentação especificando a alteração da logo",
+      "descricao": "Documentar a especificação da alteração.\n\nSubatividades:\n- Registrar logo nova e locais de aplicação\n- Listar ambientes (hom/prod)\n- Anexar evidências antes/depois",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 201,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 205,
+      "tipo": "Task",
+      "titulo": "Ajustar logo em homologação e produção",
+      "descricao": "Aplicar/ajustar a logo em homologação e produção após validação.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 201,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "ado_id": "",
+      "status": "A fazer"
     }
   ],
-  "generated_at": "2026-06-30T13:47:58"
+  "generated_at": "2026-06-30T16:09:12"
 }
