@@ -1315,7 +1315,63 @@
       "tags": "responde-ms;sgd",
       "ado_id": "",
       "status": "A fazer"
+    },
+    {
+      "csv_id": 194,
+      "tipo": "Product Backlog Item",
+      "titulo": "[CARTAS-DE-SERVICO] Auditoria de PDFs de cartas com logo política - 30-06-2026",
+      "descricao": "**História do usuário**\nComo analista de Cartas de Serviço, quero identificar quais cartas possuem PDF anexado e auditar visualmente cada PDF, para detectar e tratar cartas cujo PDF contenha logo política (conformidade e governança, ex. período eleitoral).\n\n**Resumo**\nExtração no banco das cartas de serviço que possuem URL de PDF, consolidada em um BI para navegar carta a carta e verificar, em cada PDF, a presença de logo política.\n\n**Local**\nC:\\Users\\Fabio\\Documents\\SETDIG\\2026\\projetos\\cruzamento-carta\n\n**Requisitos**\n- Consultar no banco quais cartas de serviço possuem URL de PDF.\n- Consolidar a lista (carta + URL do PDF) em um BI navegável.\n- Permitir acessar carta por carta e abrir o respectivo PDF.\n- Apoiar a verificação da presença de logo política em cada PDF.\n\n**Critérios de Aceitação**\n- Extração reprodutível listando cartas com URL de PDF.\n- BI permite navegar carta a carta com link direto para o PDF.\n- Verificação de logo política registrada por carta (presente/ausente).",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 102,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "cartas-servico;pdf;bi;auditoria;eleitoral",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 195,
+      "tipo": "Task",
+      "titulo": "Extrair no banco cartas com URL de PDF",
+      "descricao": "Consultar a base de Cartas de Serviço (Postgres, via VPN) para listar quais cartas possuem URL de PDF. Aproveitar queries.py/db.py do repo cruzamento-carta. Gerar export (CSV) carta + URL do PDF.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 194,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "cartas-servico;extracao;postgres",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 196,
+      "tipo": "Task",
+      "titulo": "Montar BI para navegar carta por carta (acesso ao PDF)",
+      "descricao": "Consolidar a lista extraída em um BI navegável, com link direto para o PDF de cada carta, permitindo percorrer carta a carta para auditoria visual.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 194,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "cartas-servico;bi",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 197,
+      "tipo": "Task",
+      "titulo": "Verificar em cada PDF presença de logo política",
+      "descricao": "Acessar carta por carta no BI e verificar se o PDF contém logo política. Registrar o resultado por carta (presente/ausente) para subsidiar tratamento.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 194,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "cartas-servico;auditoria;logo-politica",
+      "ado_id": "",
+      "status": "A fazer"
     }
   ],
-  "generated_at": "2026-06-30T09:30:25"
+  "generated_at": "2026-06-30T10:32:54"
 }
