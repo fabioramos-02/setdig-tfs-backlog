@@ -1259,7 +1259,63 @@
       "tags": "",
       "ado_id": "",
       "status": "Em progresso"
+    },
+    {
+      "csv_id": 190,
+      "tipo": "Product Backlog Item",
+      "titulo": "[RESPONDE-MS] Transferência de propriedade de formulário - 30-06-2026",
+      "descricao": "**História do usuário**\nComo gestor de formulários do Responde-MS, quero transferir a propriedade de um formulário para outro usuário, para garantir continuidade das respostas e governança quando o dono original sai do governo e perde os acessos.\n\n**Resumo**\nFormalização, junto ao Seu João, da abertura de demanda no Responde-MS: nova funcionalidade de transferência de propriedade de formulário (com prazo estipulável), garantindo continuidade das respostas e governança quando um usuário deixa o governo.\n\n**Local**\n—\n\n**Requisitos**\n- Transferir a propriedade de um formulário para outro usuário.\n- Permitir estipular prazo para a transferência/posse.\n- Garantir continuidade no recebimento e gestão das respostas após a saída do dono original.\n\n**Critérios de Aceitação**\n- Demanda alinhada e validada com o Seu João.\n- Demanda formalizada por escrito.\n- Pedido repassado à equipe SGD para encaminhamento.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "responde-ms;formularios;governanca",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 191,
+      "tipo": "Task",
+      "titulo": "Alinhar com o Seu João a demanda",
+      "descricao": "Alinhar com o Seu João a abertura da demanda do Responde-MS (transferência de propriedade de formulário) — escopo, motivação de governança e regra de prazo.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 190,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "responde-ms;alinhamento",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 192,
+      "tipo": "Task",
+      "titulo": "Formalizar escrita da demanda",
+      "descricao": "Redigir formalmente a demanda da nova funcionalidade de transferência de propriedade de formulário no Responde-MS, incluindo requisitos, regra de prazo e justificativa de continuidade/governança.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 190,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "responde-ms;documentacao",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 193,
+      "tipo": "Task",
+      "titulo": "Repassar à equipe SGD o pedido",
+      "descricao": "Encaminhar a demanda formalizada à equipe SGD para avaliação técnica e priorização.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 190,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": null,
+      "tags": "responde-ms;sgd",
+      "ado_id": "",
+      "status": "A fazer"
     }
   ],
-  "generated_at": "2026-06-25T13:38:40"
+  "generated_at": "2026-06-30T09:30:25"
 }
