@@ -1589,7 +1589,22 @@
       "data": "",
       "ado_id": "",
       "status": "A fazer"
+    },
+    {
+      "csv_id": 206,
+      "tipo": "Product Backlog Item",
+      "titulo": "[TEMPLATE-EMAIL] Assinatura de e-mail dos times SGD e CRC - 01-07-2026",
+      "descricao": "**História do usuário**\nComo SETDIG, quero um template padronizado de assinatura de e-mail para os times SGD e CRC, para garantir identidade visual institucional consistente na comunicação.\n\n**Resumo**\nTemplate de assinatura de e-mail elaborado para os times SGD, CRC e Gabinete, com base no arquivo de referência da Thereza. Assinaturas individuais geradas por pessoa (JPG) + fontes CorelDraw.\n\n**Local**\nC:\\Users\\Fabio\\Documents\\SETDIG\\2026\\projetos\\template email SETDIG\n\n**Requisitos**\n- Assinatura individual por membro (SGD, CRC, Gabinete)\n- Identidade visual SETDIG (nome oficial, cargo, contatos)\n- Arquivo-fonte editável (.cdr) para futuras alterações\n\n**Critérios de Aceitação**\n- Assinaturas geradas para todos os membros dos times\n- Padrão visual único aplicado\n- Fontes editáveis versionadas",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 101,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "data": "2026-07-01",
+      "ado_id": "",
+      "status": "Em progresso"
     }
   ],
-  "generated_at": "2026-06-30T16:24:12"
+  "generated_at": "2026-07-01T14:42:46"
 }
