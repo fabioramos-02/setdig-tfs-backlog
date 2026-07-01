@@ -1604,7 +1604,67 @@
       "data": "2026-07-01",
       "ado_id": "",
       "status": "Em progresso"
+    },
+    {
+      "csv_id": 207,
+      "tipo": "Task",
+      "titulo": "Gerar assinaturas de e-mail do time SGD",
+      "descricao": "Gerar assinatura individual (JPG) para cada membro do time SGD, com base no template da Thereza.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 206,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "data": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 208,
+      "tipo": "Task",
+      "titulo": "Gerar assinaturas de e-mail do time CRC",
+      "descricao": "Gerar assinatura individual (JPG) para cada membro do time CRC, com base no template da Thereza.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 206,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "data": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 209,
+      "tipo": "Task",
+      "titulo": "Gerar assinaturas de e-mail do Gabinete",
+      "descricao": "Gerar assinatura individual (JPG) para os membros do Gabinete, com base no template da Thereza.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 206,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "data": "",
+      "ado_id": "",
+      "status": "A fazer"
+    },
+    {
+      "csv_id": 210,
+      "tipo": "Task",
+      "titulo": "Versionar arquivo-fonte CorelDraw (.cdr)",
+      "descricao": "Salvar e versionar o arquivo-fonte editável (.cdr) do template para futuras alterações.",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 206,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "data": "",
+      "ado_id": "",
+      "status": "A fazer"
     }
   ],
-  "generated_at": "2026-07-01T14:42:46"
+  "generated_at": "2026-07-01T14:44:12"
 }
