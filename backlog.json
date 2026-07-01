@@ -1618,7 +1618,7 @@
       "tags": "",
       "data": "",
       "ado_id": "",
-      "status": "A fazer"
+      "status": "Finalizado"
     },
     {
       "csv_id": 208,
@@ -1633,7 +1633,7 @@
       "tags": "",
       "data": "",
       "ado_id": "",
-      "status": "A fazer"
+      "status": "Finalizado"
     },
     {
       "csv_id": 209,
@@ -1648,7 +1648,7 @@
       "tags": "",
       "data": "",
       "ado_id": "",
-      "status": "A fazer"
+      "status": "Finalizado"
     },
     {
       "csv_id": 210,
@@ -1666,5 +1666,5 @@
       "status": "A fazer"
     }
   ],
-  "generated_at": "2026-07-01T14:44:12"
+  "generated_at": "2026-07-01T14:44:45"
 }
