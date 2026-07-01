@@ -1594,7 +1594,7 @@
       "csv_id": 206,
       "tipo": "Product Backlog Item",
       "titulo": "[TEMPLATE-EMAIL] Assinatura de e-mail dos times SGD e CRC - 01-07-2026",
-      "descricao": "**História do usuário**\nComo SETDIG, quero um template padronizado de assinatura de e-mail para os times SGD e CRC, para garantir identidade visual institucional consistente na comunicação.\n\n**Resumo**\nTemplate de assinatura de e-mail elaborado para os times SGD, CRC e Gabinete, com base no arquivo de referência da Thereza. Assinaturas individuais geradas por pessoa (JPG) + fontes CorelDraw.\n\n**Local**\nC:\\Users\\Fabio\\Documents\\SETDIG\\2026\\projetos\\template email SETDIG\n\n**Requisitos**\n- Assinatura individual por membro (SGD, CRC, Gabinete)\n- Identidade visual SETDIG (nome oficial, cargo, contatos)\n- Arquivo-fonte editável (.cdr) para futuras alterações\n\n**Critérios de Aceitação**\n- Assinaturas geradas para todos os membros dos times\n- Padrão visual único aplicado\n- Fontes editáveis versionadas",
+      "descricao": "**História do usuário**\nComo SETDIG, quero um template padronizado de assinatura de e-mail para os times, para garantir identidade visual institucional consistente na comunicação.\n\n**Resumo**\nIniciado manualmente no CorelDraw (times SGD, CRC e Gabinete, base no arquivo da Thereza) e evoluído para um GERADOR AUTOMÁTICO em Python: lê planilhas por setor e produz as assinaturas individuais (JPG 1608x726 @300dpi) em lote, com identidade visual SETDIG. Cobertura final: 6 setores (NOC, Operação, SGD, CRC, ATEC, Administrativo) = 45 assinaturas. Inclui página (GitHub Pages) para o time buscar, pré-visualizar e baixar a sua.\n\n**Local**\nC:\\Users\\Fabio\\Documents\\SETDIG\\2026\\projetos\\template email SETDIG\\gerador-assinaturas\n\n**Requisitos**\n- Assinatura individual por membro, por setor\n- Identidade visual SETDIG (azul oficial #004F9F, brasão, nome/cargo/contatos)\n- Geração em lote a partir de planilha (sem retrabalho manual)\n- Página para autoatendimento (baixar a própria assinatura)\n\n**Critérios de Aceitação**\n- Assinaturas geradas para todos os membros dos 6 setores\n- Padrão visual único aplicado (alinhado ao design system MS)\n- Processo reproduzível por comando (python gerar.py --todos)",
       "projeto_ado": "SETDIG",
       "csv_id_pai": 101,
       "prioridade": 2,
@@ -1603,7 +1603,7 @@
       "tags": "",
       "data": "2026-07-01",
       "ado_id": "",
-      "status": "Em progresso"
+      "status": "Finalizado"
     },
     {
       "csv_id": 207,
@@ -1664,7 +1664,22 @@
       "data": "",
       "ado_id": "",
       "status": "A fazer"
+    },
+    {
+      "csv_id": 211,
+      "tipo": "Task",
+      "titulo": "Automatizar geração das assinaturas (gerador Python + página GitHub Pages)",
+      "descricao": "Automatizar a geração das assinaturas de e-mail, substituindo o processo manual do CorelDraw.\n\nSubatividades:\n- Gerador Python (Pillow + openpyxl): planilha por setor -> JPG 1608x726 @300dpi em lote\n- Cabeçalho base (logo SEGOV + brasão + arco) como template raster; recolor do azul para o tom oficial #004F9F preservando as cores do brasão\n- Suporte a 3 layouts (com/sem cargo; coordenadoria azul/cinza) e sigla por setor\n- Página GitHub Pages (HTML/CSS/JS) consumindo o design system MS: busca, filtro por setor, preview e download por pessoa\n- Código organizado (SRP, <=250 linhas/arquivo), README e testes",
+      "projeto_ado": "SETDIG",
+      "csv_id_pai": 206,
+      "prioridade": 2,
+      "sprint": "",
+      "estimativa_horas": "",
+      "tags": "",
+      "data": "",
+      "ado_id": "",
+      "status": "Finalizado"
     }
   ],
-  "generated_at": "2026-07-01T14:44:45"
+  "generated_at": "2026-07-01T19:28:36"
 }
