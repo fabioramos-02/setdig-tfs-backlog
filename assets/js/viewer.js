@@ -299,8 +299,14 @@ function renderNode(node, depth) {
   return wrap;
 }
 
-function copy(text, btn) {
-  (navigator.clipboard?.writeText(text) || Promise.reject())
+function copy(text, btn, html) {
+  const p = html && navigator.clipboard?.write
+    ? navigator.clipboard.write([new ClipboardItem({
+        "text/plain": new Blob([text], { type: "text/plain" }),
+        "text/html": new Blob([html], { type: "text/html" }),
+      })])
+    : navigator.clipboard?.writeText(text);
+  (p || Promise.reject())
     .then(() => flash(btn))
     .catch(() => {
       const ta = Object.assign(document.createElement("textarea"), { value: text });
@@ -362,7 +368,7 @@ function field(label, value, cls = "", asMarkdown = false) {
   const top = document.createElement("div"); top.className = "field-top";
   const lbl = document.createElement("span"); lbl.className = "field-label"; lbl.textContent = label;
   const btn = document.createElement("button"); btn.className = "copy-btn"; btn.textContent = "Copiar";
-  btn.addEventListener("click", () => copy(value || "", btn));
+  btn.addEventListener("click", () => copy(value || "", btn, asMarkdown ? mdRender(value || "") : null));
   top.appendChild(lbl); top.appendChild(btn);
   const val = document.createElement("div");
   val.className = "field-value" + (cls ? " "+cls : "") + (value ? "" : " empty-v");
