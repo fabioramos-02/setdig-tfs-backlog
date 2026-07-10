@@ -1,5 +1,9 @@
 # setdig-tfs-backlog — Convenções do projeto
 
+## Taxonomia de Epics (vigente desde 10-07-2026)
+
+4 Epics raiz: **SGD** (transversal/gestão), **Portal Atual** (EDS, legado), **Novo Portal** (XVia, infra nova), **Premiações** (ABEPTIC/IOSPD). Ambos os portais têm as mesmas 8 Features de módulo (Control SSO, Admin, Integrador, FormFlow, CMS Notícias, Reuniões, Portal, Atendimento). Regra de ouro e fluxo de decisão completos em [`docs/taxonomia-backlog.md`](docs/taxonomia-backlog.md) — consultar antes de lançar Epic/Feature/PBI novo.
+
 ## Título de PBI (obrigatório)
 
 Formato:
