@@ -1,6 +1,6 @@
 # setdig-tfs-backlog — instruções do projeto
 
-Repositório de **relatório semanal** da SGD. Guarda o CSV exportado da query do TFS, o resumo
+Repositório de **relatório semanal** individual (work items do Fabio). Guarda o CSV exportado da query do TFS, o resumo
 em prosa de cada semana, e publica uma página única no GitHub Pages.
 
 **Este repo não escreve no TFS.** Quem lança demanda é `../lancar-demandas-xvia`. Aqui só entra
@@ -15,8 +15,8 @@ o que já aconteceu, na forma de CSV exportado. Não misture os dois fluxos.
 | `build.py` | junta os dois e reescreve `index.html`. |
 | `index.html` | **gerado** entre `/*DATA_START*/` e `/*DATA_END*/`. O resto do arquivo é template — pode editar. |
 
-A data no nome é sempre a **sexta-feira** que fecha o recorte de 7 dias. CSV e md de uma mesma
-semana têm o mesmo nome.
+A data no nome é sempre a **sexta-feira** que fecha o recorte. O período exibido vai da segunda
+àquela sexta. CSV e md de uma mesma semana têm o mesmo nome.
 
 ## Depois de mexer em dados/ ou relatorios/
 

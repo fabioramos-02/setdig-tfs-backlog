@@ -160,9 +160,11 @@ def ler_csv(caminho):
 
 
 def periodo(fim):
-    """'2026-09-04' -> '29/08 a 04/09' (os 7 dias que terminam na data do arquivo)."""
+    """'2026-09-04' -> '31/08 a 04/09': a semana util que termina na data do arquivo.
+    O recorte comeca na segunda-feira porque e assim que a reuniao de alinhamento
+    enxerga a semana."""
     d = datetime.datetime.strptime(fim, "%Y-%m-%d").date()
-    ini = d - datetime.timedelta(days=6)
+    ini = d - datetime.timedelta(days=d.weekday())
     return "{:%d/%m} a {:%d/%m}".format(ini, d)
 
 

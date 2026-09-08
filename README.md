@@ -1,6 +1,6 @@
 # Relatório semanal — SGD
 
-Página que mostra, semana a semana, o que o time da SGD finalizou, o que está em andamento, o que
+Página que mostra, semana a semana, o que eu finalizei, o que está em andamento, o que
 está pendente e o que está bloqueado no backlog XVIA do TFS.
 
 **Publicado em:** <https://fabioramos-02.github.io/setdig-tfs-backlog/>
@@ -20,7 +20,7 @@ git push origin master
 ```
 
 A data do nome do arquivo é sempre a **sexta-feira** que fecha o recorte. O `build.py` deriva o
-período dos 7 dias que terminam nela.
+período da semana útil: da segunda até essa sexta.
 
 O comando `/semana` no Claude Code faz os passos 2 e 3 e ainda grava a nota no vault do Obsidian.
 
@@ -42,7 +42,7 @@ Query `Segunda`, tipo **Tree of work items**, no projeto XVIA.
 | Work Item Type | In | Product Backlog Item, Task, Bug |
 | And Area Path | Under | `XVIA\SGD` |
 | And Changed Date | >= | `@Today - 7` |
-| And Assigned To | In | Fabio Willian Lima Ramos, Glaucia Araujo de Oliveira, Daniele Lins Ichiy |
+| And Assigned To | = | @Me |
 
 Filter options: `Match linked work items first`.
 
