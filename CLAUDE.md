@@ -47,6 +47,10 @@ Duas a seis linhas, no passado, dizendo o que andou. Estrutura que funciona:
 
 Uma ou duas frases sobre o que andou de fato.
 
+## Prioridades da semana (DD/MM a DD/MM)
+1. **Frente** — o que fazer nesta semana. #id #id
+2. ...
+
 ## Destaques
 - **Frente** — o que entregou, com número ou nome concreto.
 
@@ -61,6 +65,10 @@ Não repita a lista de tasks: ela já está na página, logo abaixo. O resumo di
 dizem.
 
 ## A página
+
+Visual do MS Design System: tokens `--ds-*` embutidos no `<style>` do `index.html`, sem CSS
+externo. A lista numerada logo abaixo de `## Prioridades...` vira cards numerados, e todo `#id` do
+resumo vira link do TFS. Os dois efeitos vêm do JS da página, e o autor só escreve markdown.
 
 Uma tela, uma rolagem: números, bloqueios em destaque, resumo, entregas por frente. Sem árvore,
 sem painel de detalhe, sem filtro.

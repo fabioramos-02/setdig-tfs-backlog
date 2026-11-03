@@ -76,8 +76,6 @@ dados/AAAA-MM-DD.csv        export bruto da query
 relatorios/AAAA-MM-DD.md    resumo em prosa da semana (opcional)
 build.py                    CSV + md -> index.html
 index.html                  gerado; não editar o bloco entre os marcadores DATA
-assets/ds-sis.css           Design System do Governo de MS
-assets/css/relatorio.css    estilos da página
 ```
 
 ## Rodar local
