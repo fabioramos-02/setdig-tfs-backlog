@@ -51,6 +51,9 @@ Uma ou duas frases sobre o que andou de fato.
 1. **Frente** — o que fazer nesta semana. #id #id
 2. ...
 
+## Reuniões da semana
+- **DD/MM — Assunto**, com quem. O que saiu dela. #id
+
 ## Destaques
 - **Frente** — o que entregou, com número ou nome concreto.
 
